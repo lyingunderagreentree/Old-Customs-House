@@ -1,0 +1,14 @@
+.language-switch {
+  color: white;
+
+  &__item {
+    margin: 0 10px;
+    
+    &:hover {
+
+      &::before {
+        width: 120%;
+      }
+    }
+  }
+}

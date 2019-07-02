@@ -1,0 +1,12 @@
+.social-buttons {
+  display: inline-flex;
+
+  &__item {
+    margin-right: 46px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+}
