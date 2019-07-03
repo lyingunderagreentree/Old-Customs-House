@@ -14,34 +14,46 @@ class App extends Component {
 
 	render() {
 		return (
-			// <Layout>
-			// 	<Slide />
-			// </Layout>			
+
+			// <PageSlider>
+
+			// 	<Layout>
+			// 		<AboutPage />
+			// 	</Layout>
+
+			// 	<Layout>
+			// 		<AfishaPage />
+			// 	</Layout>
+
+			// </PageSlider>
+						
 			
 			<div>
 				
 				<Background />
 
-				<div className="container is-10 is-center">
+				<div className="columns columns--overflow">
+					<div className="container column is-10">
 
-					<Header />
+						<Header />
 
-					<div className="main-slide">
-						
-						<div className="main-slide__name">
-							<h1>Ресторан высокой кухни
-							<span className="primary-color"> с многолетней историей</span></h1>
+						<div className="main-slide">
+							
+							<div className="main-slide__name">
+								<h1>Ресторан высокой кухни
+								<span className="primary-color"> с многолетней историей</span></h1>
+							</div>
+
+							<div className="bttn">Забронировать стол</div>
 						</div>
 
-						<div className="bttn">Забронировать стол</div>
+						<Footer />
+
 					</div>
 
-					<Footer />
+					<div className="bttn--side"><a>Забронировать</a></div> 
 
 				</div>
-
-				<div className="bttn--side">Забронировать</div> 
-
 			</div>
 		)
 	}

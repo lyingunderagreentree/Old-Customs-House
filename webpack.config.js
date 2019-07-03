@@ -25,6 +25,15 @@ module.exports = {
 				},
 			},
 			{
+				test: /\.(ttf|eot|woff|woff2|otf)$/,
+				use: {
+					loader: "file-loader",
+					options: {
+						name: "fonts/[name].[ext]",
+					},
+				},
+			},
+			{
 				test: /\.scss$/,
 				exclude: /node_modules/,
 				use: ["style-loader", "css-loader", "sass-loader",
@@ -46,7 +55,8 @@ module.exports = {
             }
           }
         ]
-      }
+			}
+			
 		]
 	},
 
