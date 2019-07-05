@@ -1,5 +1,6 @@
 @import '../../node_modules/normalize.css/normalize.css';
 @import '../../node_modules/bulma/css/bulma.min.css';
+@import '../../node_modules/slick-carousel/slick/slick.css';
 @import './fonts.scss';
 
 * {
@@ -12,16 +13,54 @@ body {
   position: relative;
 }
 
-.columns--overflow {
-  overflow: auto;
-}
-
-.container {
-  max-width: 1800px;
-  height: 100vh;
+.min-height {
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  position: relative;
+}
+
+.container {
+  padding: 0 37px;
+
+  &--half {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    width: 50%;
+    margin-left: -10px;
+  }
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.background {
+  width: 100%;
+  min-height: 100vh;
+  position: fixed;
+  z-index: -2;
+  overflow: auto;
+  background-size: cover;
+  top: 0;
+  left: 0;
+
+  &--main {
+    background-image: url(../pages/main-page/img/Main_PAGE.jpg)
+  }
+
+  &--img {
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    z-index: -2;
+  }
+}
+
+.text-block {
+  max-width: 36.5rem;;
 }
 
 h1 {
@@ -35,9 +74,28 @@ h1 {
 
 h2 {
   font-size: 4.0625rem;
+  font-family: 'Playfair Display Bold';
   font-weight: bold;
   line-height: 1.1;
   letter-spacing: normal;
+  color: $primary-color;
+  display: inline-block;
+  margin-bottom: 60px;
+
+  &::after {
+    content: '';
+    display: block;
+    border-bottom: 2px solid #707070;
+    height: 24px;
+  }
+}
+
+p {
+  font-family: 'MullerRegular';
+  font-size: 1.125rem;
+  line-height: 1.6625rem;
+  color: white;
+  margin-bottom: 20px;
 }
 
 a {

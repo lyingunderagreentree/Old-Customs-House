@@ -6,9 +6,11 @@ import LanguageSwitch from '../language-switch/language-switch'
 export default() => (
   <div className="footer">
 
-    <SocialButtons />
+    <div className="container container--footer">  
+      <SocialButtons />
 
-    <LanguageSwitch />
+      <LanguageSwitch />
+    </div>
 
   </div>
 )

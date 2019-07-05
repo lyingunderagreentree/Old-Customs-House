@@ -1,7 +1,10 @@
 .footer {
   background-color: transparent;
-  margin-top: 5rem; 
-  padding: 0 0 70px 0;
-  display: flex;
-  justify-content: space-between;
+  padding: 70px 0;
+  z-index: 2;
+  
+  .container--footer {
+    display: flex;
+    justify-content: space-between;
+  }
 }

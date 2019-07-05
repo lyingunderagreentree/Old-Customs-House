@@ -26,6 +26,7 @@ module.exports = {
 			},
 			{
 				test: /\.(ttf|eot|woff|woff2|otf)$/,
+				exclude: /node_modules/,
 				use: {
 					loader: "file-loader",
 					options: {
@@ -46,7 +47,8 @@ module.exports = {
 				]
 			},
 			{
-        test: /\.(png|jpe?g|gif)$/i,
+				test: /\.(png|jpe?g|gif)$/i,
+				exclude: /node_modules/,
         use: [
           {
             loader: 'url-loader',
