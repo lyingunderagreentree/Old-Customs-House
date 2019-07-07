@@ -4,7 +4,7 @@ import Header from '../header/header'
 import Footer from '../footer/footer'
 
 export default ({children}) => (
-  <div className="layout"> 
+  <div className="layout-black"> 
 
     <div className="min-height">
       <Header />

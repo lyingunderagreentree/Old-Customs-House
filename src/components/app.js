@@ -1,9 +1,13 @@
 import React, { Component } from "react"
 import '../styles/app.scss'
 import '../styles/buttons.scss'
-import Layout from './layout/layout'
+import LayoutWhite from './layout/layout-white'
+import LayoutBlack from './layout/layout-black'
 import MainPage from '../pages/main-page/main-page'
 import AboutPage from '../pages/about-page/about-page'
+import AfishaPage from '../pages/afisha-page/afisha-page'
+import MenuPage from '../pages/menu-page/menu-page'
+import MenuPageItem from '../pages/menu-page/menu-page-item'
 
 class App extends Component {
 
@@ -16,13 +20,25 @@ class App extends Component {
 			
 			<div>
 				
-				<Layout>
+				<LayoutWhite>
 					<MainPage />
-			 	</Layout>
+			 	</LayoutWhite>
 
-				 <Layout>
+				{/* <LayoutWhite>
 					<AboutPage />
-			 	</Layout>
+			 	</LayoutWhite>
+
+				<LayoutBlack>
+					<AfishaPage />
+			 	</LayoutBlack> */}
+
+				<LayoutWhite>
+					<MenuPage />
+				</LayoutWhite>
+
+				<LayoutWhite>
+					<MenuPageItem />
+				</LayoutWhite>
 
 			</div>
 

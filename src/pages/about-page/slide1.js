@@ -28,7 +28,7 @@ export default () => (
 
     </div>
 
-    <img src={aboutPagePic1} className="background--img" />
+    <img src={aboutPagePic1} className="background background--img" />
 
   </div>
 

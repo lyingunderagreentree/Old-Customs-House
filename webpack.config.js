@@ -57,13 +57,20 @@ module.exports = {
             }
           }
         ]
-			}
-			
+			},
+			{
+				test: /\.svg$/,
+				exclude: /node_modules/,
+				loader: 'svg-inline-loader',
+				options: {
+					removeSVGTagAttrs: false,
+					removeTags: false
+				}
+    	}
 		]
 	},
 
 	plugins: [
-		//new HtmlWebpackPlugin(__dirname + 'dist'),
 		new HtmlWebpackPlugin({
       template: "./src/index.html"
     }),

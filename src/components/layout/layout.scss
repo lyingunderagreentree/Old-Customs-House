@@ -1,3 +1,37 @@
-.layout {
+.layout-white {
+  a, p {
+    color: white;
+  }
+
+  .header__logo--white {
+    display: block;
+    
+  } 
+
+  .social-buttons__item {
+    .social-buttons__icon {
+      svg g path {
+        fill: #fff;
+      }
+    }
+  }
+}
   
+.layout-black {
+  a, p {
+    color: #212121;
+  }
+
+  .header__logo--black {
+    display: block;
+    
+  }
+  
+  .social-buttons__item {
+    .social-buttons__icon {
+      svg g path {
+        fill: $almost-black;
+      }
+    }
+  }
 }

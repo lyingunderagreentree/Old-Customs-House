@@ -1,0 +1,23 @@
+.menu-section__item {
+  display: flex;
+  justify-content: space-between;
+  
+  p {
+    display: inline-block;
+  }
+
+  .position {
+    width: 70%;
+  }
+
+  .price {
+    width: 10%;
+  }
+
+  .dotted {
+    display: inline-block;
+    border-bottom: 1px dotted #fff;
+    width: 18%;
+    height: 20px;
+  }
+}

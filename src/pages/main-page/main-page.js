@@ -15,7 +15,7 @@ export default () => (
       
     </div>
 
-    <div /*style={{backgroundImage: 'url(./img/Main_PAGE.jpg)'}}*/ className="background background--main"></div>
+    <div className="background background--main"></div>
 
   </div>
 
