@@ -1,0 +1,54 @@
+.contact-info {
+  width: 560px;
+
+  &__quote {
+    font: 32px $playfair;
+    font-weight: bold;
+    color: $primary-color; 
+    display: block;
+    margin-bottom: 20px;
+    position: relative;
+  }
+
+  .contact-info__quote-icon {
+    position: absolute;
+    top: -25px;
+    left: -55px;
+
+    svg {
+      path {
+        fill: $pale-gray;
+        opacity: 0.5;
+      }
+    }
+  }
+
+  &__p {
+    font: 18px $muller;
+    line-height: 31px;
+    letter-spacing: 2;
+    color: $dark-gray!important;
+  }
+
+  &__address {
+    margin: 40px 0;
+
+    li {
+      font: 18px $muller;
+      font-weight: bold;
+      line-height: 31px;
+      color: $almost-black;
+      margin: 10px 0;
+    }
+
+    li i {
+      margin-right: 20px;
+    }
+
+    li svg {
+      path {
+        fill: $almost-black;
+      }
+    }
+  }
+}

@@ -3,7 +3,7 @@
   background-color: transparent;
   border: 1px solid $primary-color;
   padding: 17px 60px;
-	border-radius: 3px;
+	border-radius: 2px;
 	color: white;
 	text-align: center;
 	text-transform: uppercase;
@@ -14,6 +14,7 @@
 	&:hover {
 		background-color: $primary-color;
 		cursor: pointer;
+		outline: none;
 	}
 }
 
@@ -25,3 +26,39 @@
 	font-size: 0.75rem;
 }
 
+.bttn--back {
+	border: none;
+	color: $primary-color;
+	padding: 20px 0px;
+	font: 12px $muller;
+	text-align: left;
+	letter-spacing: 3.6px;
+
+	&:hover {
+		background: transparent;
+	}
+
+	// &::before {
+	// 	content: '<-----';
+	// 	display: inline-block;
+	// 	margin-right: 20px;
+	// }
+}
+
+.bttn--send {
+	margin: 20px 0;
+	background-color: $primary-color;
+	width: 20rem;
+}
+
+.animated-scroll {
+  position: absolute;
+  bottom: 40px;
+	right: calc(50% - 25px);
+
+	&--black {
+		svg path {
+			stroke: $almost-black;
+		}
+	}
+}

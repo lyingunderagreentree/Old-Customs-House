@@ -2,5 +2,14 @@
 
   .menu-list__item {
     margin-bottom: 15px;
+    
+    a {
+      display: inline-block;
+
+      &:hover {
+        background: transparent;
+        color: white;
+      }
+    }
   }
 }

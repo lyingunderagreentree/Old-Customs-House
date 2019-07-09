@@ -13,8 +13,12 @@
 
       .social-buttons__icon {
         svg {
-          width: 100%;
-          height: 100%;
+          width: 20px;
+          vertical-align: super;
+
+          g {
+            display: contents;
+          }
         }
       }
     }

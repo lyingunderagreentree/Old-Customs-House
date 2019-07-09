@@ -7,6 +7,8 @@ import Slide5 from './slide5'
 import Slider from 'react-slick'
 import '../page-slider.scss'
 import './afisha-page.scss'
+import Lottie from 'react-lottie'
+import animationScroll from '../scroll.json' 
 
 const sliderSettings = {
   dots: true,
@@ -14,6 +16,15 @@ const sliderSettings = {
   slidesToShow: 1,
   arrows: false
 }
+
+const defaultOptions = {
+  loop: true,
+  autoplay: true, 
+  animationData: animationScroll,
+  rendererSettings: {
+    preserveAspectRatio: 'xMidYMid slice'
+  }
+};
 
 export default () => (
   <div className="afisha-page page">
@@ -25,6 +36,9 @@ export default () => (
       <Slide4 />
       <Slide5 />
     </Slider>
+    <div className="animated-scroll animated-scroll--black">
+      <Lottie options={defaultOptions} width={50}/>
+    </div>
     
   </div>
 )

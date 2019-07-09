@@ -24,13 +24,14 @@ body {
 
 .container {
   min-width: 1500px;
-  padding: 0 37px;
+  //padding: 0 37px;
 
   &--half {
     display: flex;
-    flex-direction: column;
-    align-items: baseline;
-    width: 45%;
+
+    &__item {
+      width: 50%;
+    }
   }
 
   &--double {
@@ -47,12 +48,12 @@ body {
   &--menu {
     display: flex;
     flex-direction: column;
-    width: 60%;
+    width: 55%;
   }
 }
 
 .page {
-  margin-top: auto;
+  margin-bottom: auto;
   width: 100vw;
   height: auto;
 }
@@ -87,7 +88,7 @@ body {
 }
 
 .text-block {
-  max-width: 36.5rem;;
+  max-width: 560px;
 }
 
 h1 {
@@ -96,29 +97,32 @@ h1 {
   font-weight: bold;
   line-height: 1.13;
   letter-spacing: 0.1rem;
-  font-family: 'Playfair Display Bold';
+  font-family: $playfair;
 }
 
 h2 {
   font-size: 4.0625rem;
-  font-family: 'Playfair Display Bold';
+  font-family: $playfair;
   font-weight: bold;
   line-height: 1.1;
-  letter-spacing: normal;
   color: $primary-color;
   display: inline-block;
-  margin-bottom: 60px;
+  margin-bottom: 50px;
+  overflow: hidden;
+  padding: 30px 0;
 
   &::after {
     content: '';
-    display: block;
-    border-bottom: 2px solid #707070;
-    height: 24px;
+    display: inline-block;
+    vertical-align: bottom;
+    height: 1px;
+    box-shadow: -98vw 100vw 0 98.3vw;
+    color: $dark-gray;
   }
 }
 
 p {
-  font-family: 'MullerRegular';
+  font-family: $muller;
   font-size: 1.125rem;
   line-height: 1.6625rem;
   color: white;
@@ -128,7 +132,8 @@ p {
 a {
   font-size: 0.75rem;
   //color: white;
-  font-family: 'MullerBold';
+  font-family: $muller;
+  font-weight: bold; 
   line-height: 1.13;
   letter-spacing: 1.6px;
   text-transform: uppercase;

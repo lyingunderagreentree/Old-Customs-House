@@ -8,6 +8,7 @@ import AboutPage from '../pages/about-page/about-page'
 import AfishaPage from '../pages/afisha-page/afisha-page'
 import MenuPage from '../pages/menu-page/menu-page'
 import MenuPageItem from '../pages/menu-page/menu-page-item'
+import ContactPage from '../pages/contact-page/contact-page'
 
 class App extends Component {
 
@@ -24,13 +25,13 @@ class App extends Component {
 					<MainPage />
 			 	</LayoutWhite>
 
-				{/* <LayoutWhite>
+				<LayoutWhite>
 					<AboutPage />
 			 	</LayoutWhite>
 
 				<LayoutBlack>
 					<AfishaPage />
-			 	</LayoutBlack> */}
+			 	</LayoutBlack> 
 
 				<LayoutWhite>
 					<MenuPage />
@@ -40,6 +41,10 @@ class App extends Component {
 					<MenuPageItem />
 				</LayoutWhite>
 
+				<LayoutBlack>
+					<ContactPage />
+				</LayoutBlack>
+
 			</div>
 
 		)
@@ -47,28 +52,3 @@ class App extends Component {
 }
 
 export default App
-
-{/* <Background />
-
-<div className="columns columns--overflow">
-	<div className="container column is-10">
-
-		<Header />
-
-		<div className="main-slide">
-			
-			<div className="main-slide__name">
-				<h1>Ресторан высокой кухни
-				<span className="primary-color"> с многолетней историей</span></h1>
-			</div>
-
-			<div className="bttn">Забронировать стол</div>
-		</div>
-
-		<Footer />
-
-	</div>
-
-	<div className="bttn--side"><a>Забронировать</a></div> 
-
-</div> */}

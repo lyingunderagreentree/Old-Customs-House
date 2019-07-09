@@ -1,0 +1,29 @@
+import React from 'react'
+import './contact-info.scss'
+import InlineSVG from 'svg-inline-react'
+import place from './img/place.svg'
+import clock from './img/clock.svg'
+import phone from './img/phone.svg'
+import mail from './img/mail.svg'
+import qoute from './img/quote.svg'
+
+export default () => (
+  <div className="contact-info">
+    
+    <span className="contact-info__quote">
+      Мир меняется, Старая Таможня остается прежней!
+      <InlineSVG className="contact-info__quote-icon" src={qoute} />
+    </span>
+    <p className="contact-info__p">С 1996 года ресторан бережно хранит свои лучшие традиции. 
+      Вы можете забронировать стол по телефону или заполнив форму ниже
+    </p>
+
+    <ul className="contact-info__address"> 
+      <li><InlineSVG src={place} />Санкт-Петербург, Таможенный переулок, 1</li>
+      <li><InlineSVG src={clock} />Ежедневно 13:00 - 23:00</li>
+      <li><InlineSVG src={phone} />+7 (821) 327 89 80</li>
+      <li><InlineSVG src={mail} />custom@cocncord-catering</li>
+    </ul>
+
+  </div>
+)

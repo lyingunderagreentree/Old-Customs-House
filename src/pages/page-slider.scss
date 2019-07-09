@@ -22,23 +22,43 @@
 
   .slick-dots {
     position: absolute;
-    right: 14%;
-    top: 40%;
+    right: 7%;
+    top: 50%;
+    text-align: right;
 
     li button {
       color: white;
       background-color: transparent;
       border: none;
-      font-size: 20px;
+      font: 14px $muller;
+      font-weight: 300; 
+      line-height: 18px;
       margin: 5px 0;
+
+      &::before {
+        content: '0';
+        display: inline-block;
+        width: 16px;
+        font-family: inherit;
+      }
+
+      &:hover {
+        cursor: pointer;
+        outline: none;
+      }
     }
 
     .slick-active button {
       color: $primary-color;
-      font-size: 30px;
+      font: 26px $muller;
+      line-height: 33px;
       outline: none;
 
-      &:after {
+      &::before {
+        width: 20px;
+      }
+
+      &::after {
         content: '';
         display: block;
         border-bottom: 1px solid $primary-color;
