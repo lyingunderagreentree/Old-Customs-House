@@ -1,8 +1,10 @@
 import React from 'react'
 import './header.scss'
-import headerWhiteLogoUrl from './img/logo.png'
-import headerBlackLogoUrl from './img/logo_black.png'
+// import headerWhiteLogoUrl from './img/logo.png'
+// import headerBlackLogoUrl from './img/logo_black.png'
+import InlineSVG from 'svg-inline-react'
 import Navigation from '../navigation/navigation'
+import logo from './img/logo.svg'
 
 export default () => (
 
@@ -12,8 +14,7 @@ export default () => (
 
 			<div className="columns space-between">
 				<div className="header__logo column is-3">
-					<img src={headerWhiteLogoUrl} className="header__logo header__logo--white" />
-					<img src={headerBlackLogoUrl} className="header__logo header__logo--black" />
+					<InlineSVG src={logo} />
 				</div>
 				<div className="column is-4">
 					<Navigation />		

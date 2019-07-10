@@ -16,14 +16,6 @@
 
     &.slick-prev {
       margin-right: 50px;
-
-      // &::after {
-      //   content: 'f053';
-      //   display: block;
-      //   color: white;
-      //   width: 30px;
-      //   height: 30px;
-      // }
     }
   }
 
@@ -38,7 +30,7 @@
     }
 
     .slick-track img {
-      height: -webkit-fill-available;
+      height: 588px;
       object-fit: cover;
     }
   }

@@ -1,29 +1,22 @@
 .page__slider {
-  position: absolute;
-  width: 100vw;
-  height: 100vh;
-  top: 0;
-  left: 0;
 
-  .slick-list {
-    position: absolute;
-    width: 100vw;
+  .slick-slider .slick-list {
     height: 100vh;
-    overflow: unset;
   }
 
   .slick-list .slick-track {
-    height: 100vh;
+    transform: none;
   }
 
   .slick-list .slide {
-    margin-top: 150px;
+    height: 100vh;
+    padding-top: 170px; 
   }
 
   .slick-dots {
     position: absolute;
-    right: 7%;
-    top: 50%;
+    right: 11%;
+    top: calc(50% - 75px);
     text-align: right;
 
     li button {

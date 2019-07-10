@@ -14,7 +14,11 @@ const sliderSettings = {
   dots: true,
   speed: 300,
   slidesToShow: 1,
-  arrows: false
+  arrows: false,
+  vertical: true,
+  verticalSwiping: true
+	// useTransform: true,
+  // cssEase: 'cubic-bezier(0.645, 0.045, 0.355, 1.000)'
 }
 
 const defaultOptions = {

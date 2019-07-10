@@ -1,54 +1,56 @@
-.layout-white {
+.layout {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  color: white;
+
+  &--black {
+    color: $almost-black;
+  }
+
   a, p {
     color: white;
   }
 
-  .header__logo--white {
-    display: block;
-    
-  } 
-
   .social-buttons__item {
     .social-buttons__icon {
       svg g path {
-        fill: #fff;
+        fill: white;
       }
     }
   }
-
-  
 }
   
-.layout-black {
-  a, p {
-    color: #212121;
-  }
+// .layout-black {
+//   a, p {
+//     color: #212121;
+//   }
 
-  .header__logo--black {
-    display: block; 
-  }
+//   .header__logo--black {
+//     display: block; 
+//   }
 
-  h2 {
-    &::after {
-      color: $pale-gray;
-    }
-  }
+//   h2 {
+//     &::after {
+//       color: $pale-gray;
+//     }
+//   }
   
-  .social-buttons__item {
-    .social-buttons__icon {
-      svg g path {
-        fill: $almost-black;
-      }
-    }
-  }
+//   .social-buttons__item {
+//     .social-buttons__icon {
+//       svg g path {
+//         fill: $almost-black;
+//       }
+//     }
+//   }
 
-  .page__slider .slick-dots {
-    li button {
-      color: $almost-black;
-    }
+//   .page__slider .slick-dots {
+//     li button {
+//       color: $almost-black;
+//     }
 
-    .slick-active button {
-      color: $primary-color;
-    }
-  }
-}
+//     .slick-active button {
+//       color: $primary-color;
+//     }
+//   }
+// }

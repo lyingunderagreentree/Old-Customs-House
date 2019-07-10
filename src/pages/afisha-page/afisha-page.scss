@@ -1,3 +1,13 @@
 .afisha-page {
   background-color: white; 
+
+  p {
+    color: $almost-black;
+  }
+
+  .afisha-slider {
+    .slick-list {
+      height: 100%;
+    } 
+  }
 }

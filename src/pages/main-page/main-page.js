@@ -3,7 +3,7 @@ import './main-page.scss'
 
 export default () => (
 
-  <div className="main-page">        
+  <div className="main-page page">        
 
     <div className="container">
 

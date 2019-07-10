@@ -1,5 +1,4 @@
 import React from 'react'
-// import menuPageItem from './menu-page-item'
 import './menu-page.scss'
 import mainMenuPic from './img/main-menu.png'
 
