@@ -33,7 +33,7 @@ const defaultOptions = {
 export default () => (
   <div className="afisha-page page">
 
-    <Slider className="page__slider" {...sliderSettings}>
+    <Slider className="page__slider dots-black" {...sliderSettings}>
       <Slide1 />
       <Slide2 />
       <Slide3 />

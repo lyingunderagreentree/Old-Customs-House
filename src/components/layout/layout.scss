@@ -4,53 +4,25 @@
   height: 100vh;
   color: white;
 
+  a, p {
+    color: inherit;
+  }
+
+  svg g path {
+    fill: white;
+  }
+
   &--black {
     color: $almost-black;
-  }
+    
+    svg g path {
+      fill: $almost-black;
+    }
 
-  a, p {
-    color: white;
-  }
-
-  .social-buttons__item {
-    .social-buttons__icon {
-      svg g path {
-        fill: white;
-      }
+    .page__slider .slick-dots li button {
+      color: $almost-black;
     }
   }
 }
   
-// .layout-black {
-//   a, p {
-//     color: #212121;
-//   }
 
-//   .header__logo--black {
-//     display: block; 
-//   }
-
-//   h2 {
-//     &::after {
-//       color: $pale-gray;
-//     }
-//   }
-  
-//   .social-buttons__item {
-//     .social-buttons__icon {
-//       svg g path {
-//         fill: $almost-black;
-//       }
-//     }
-//   }
-
-//   .page__slider .slick-dots {
-//     li button {
-//       color: $almost-black;
-//     }
-
-//     .slick-active button {
-//       color: $primary-color;
-//     }
-//   }
-// }

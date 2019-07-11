@@ -2,17 +2,34 @@ import React from 'react'
 import './layout.scss'
 import Header from '../header/header'
 import Footer from '../footer/footer'
+import eventEmitter from '../../utils/eventEmitter'
 
-export default ({children}) => (
-  <div className="layout"> 
+export default class extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      currentTheme: ''
+    }
+  }
 
-    <div className="min-height">
-      <Header />
-      {children}
-      <Footer />
+  componentDidMount() {
+    eventEmitter.on('CHANGE_LAYOUT_THEME', theme => {
+      this.setState({
+        currentTheme: theme
+      })
+    })
+  }
 
-      <div className="bttn--side"><a>Забронировать</a></div>  
-    </div>
-
-  </div>
-)
+  render() {
+    return (
+      <div className={`layout ${this.state.currentTheme}`}> 
+        <div className="min-height">
+          <Header />
+          {this.props.children}
+          <Footer />
+          <div className="bttn--side"><a>Забронировать</a></div>  
+        </div>
+      </div>
+    )
+  }
+}

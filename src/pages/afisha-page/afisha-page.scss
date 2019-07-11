@@ -1,6 +1,10 @@
 .afisha-page {
   background-color: white; 
 
+  h2::after {
+    color: $pale-gray;
+  }
+
   p {
     color: $almost-black;
   }

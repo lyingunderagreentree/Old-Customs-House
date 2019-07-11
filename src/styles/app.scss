@@ -77,12 +77,12 @@ body {
   }
 
   &--menu {
-    background-color: $almost-black;
+    background-image: url(../pages/menu-page/img/menu-back.jpg);
   }
 }
 
 .text-block {
-  max-width: 560px;
+  max-width: 600px;
 }
 
 h1 {
@@ -103,13 +103,14 @@ h2 {
   display: inline-block;
   margin-bottom: 30px;
   overflow: hidden;
+  padding-bottom: 21px; 
 
   &::after {
     content: '';
     display: inline-block;
     vertical-align: bottom;
     height: 1px;
-    box-shadow: -98vw 100vw 0 98.3vw;
+    box-shadow: -98vw 100vw 0 99vw;
     color: $dark-gray;
   }
 }
@@ -120,11 +121,11 @@ p {
   line-height: 1.6625rem;
   color: white;
   margin-bottom: 20px;
+  letter-spacing: 0.6px;
 }
 
 a {
   font-size: 0.75rem;
-  //color: white;
   font-family: $muller;
   font-weight: bold; 
   line-height: 1.13;
