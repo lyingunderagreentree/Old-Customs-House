@@ -1,0 +1,11 @@
+.background {
+  width: 100%;
+  min-height: 100vh;
+  position: fixed;
+  z-index: -2;
+  overflow: auto;
+  background-image: url(./img/Main_PAGE.jpg);
+  background-size: cover;
+  top: 0;
+  left: 0;
+}

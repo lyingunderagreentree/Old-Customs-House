@@ -1,0 +1,28 @@
+.modal-body {
+
+  .booking-modal {
+    position: absolute;
+    top: 0;
+    bottom: auto;
+    padding: 100px 200px;
+    max-width: 960px;
+    background-color: $almost-black;
+
+    .contact-info__quote {
+      color: white;
+    }
+    
+    p, li {
+      color: white;
+    }
+
+    svg path {
+      fill: white;
+    }
+
+    input {
+      background-color: #101010;
+      border-color: #d3d3d3;
+    }
+  }
+}

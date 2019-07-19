@@ -1,0 +1,45 @@
+.date {
+  display: flex;
+  align-items: stretch; 
+
+  p {
+    font: 18px $muller;
+    font-weight: bold;
+    margin-left: 10px;
+    color: #d3d3d3;
+    line-height: 25px;
+    letter-spacing: 1.8px;
+
+    @include breakpoint('large') {
+      font-size: 14px;
+      line-height: 21px;
+      letter-spacing: 1px;
+    }
+  
+    @include breakpoint('medium') {
+      font-size: 14px;
+      line-height: 21px;
+      letter-spacing: 1px;
+    }
+  }
+
+  svg {
+    width: 20px;
+    height: 20px;
+
+    @include breakpoint('large') {
+      width: 15px;
+      height: 15px;
+    }
+  
+    @include breakpoint('medium') {
+      width: 15px;
+      height: 15px;
+    }
+  
+    path {
+      fill: #d3d3d3;
+      stroke: white;
+    }
+  }
+}

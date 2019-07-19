@@ -3,7 +3,9 @@
   
   &__item {
     margin: 0 10px;
-    
+  }
+
+  .highlighted {
     &:hover {
 
       &::before {

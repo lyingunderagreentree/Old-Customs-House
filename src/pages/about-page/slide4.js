@@ -2,12 +2,10 @@ import React from 'react'
 import aboutPagePic4 from './img/About_4.jpg'
 
 export default () => (
-  <div className="slide4 slide">
-
-    <div className="container">
-
-      <div className="container--half">
-        <div className="container--half__item">
+  <div className="slide1 slide columns">
+    <div className="container column is-10 is-10-mobile">
+      <div className="content-holder">
+        <div className="content-holder__item">
           <div><h2>Архитектурное наследие</h2></div>
 
           <div className="text-block">

@@ -7,42 +7,74 @@ import Slide3 from './slide3'
 import Slide4 from './slide4'
 import Slide5 from './slide5'
 import Slider from 'react-slick'
-import Lottie from 'react-lottie'
-import animationScroll from '../scroll.json' 
+import eventEmitter from '../../utils/eventEmitter'
+import ScrollEventsArea from '../../components/scroll-events-area/scroll-events-area'
+import AnimatedScroll from '../../components/animated-scroll-icon/animated-scroll-icon'
 
-const sliderSettings = {
-  dots: true,
-  speed: 300,
-  slidesToShow: 1,
-  arrows: false,
-  vertical: true,
-	verticalSwiping: true,
-	// useTransform: true,
-  // cssEase: 'cubic-bezier(0.645, 0.045, 0.355, 1.000)'
+class AfishaPage extends React.Component {
+  isSliderEnabled = true
+
+  sliderSettings = {
+    dots: true,
+    speed: 800,
+    slidesToShow: 1,
+    arrows: false,
+    vertical: true,
+    verticalSwiping: false,
+    infinite: false,
+    useTransform: true,
+    draggable: false,
+    cssEase: 'cubic-bezier(0.445, 0.050, 0.550, 0.950)'
+  }
+
+  componentDidMount() {
+    eventEmitter.emit('SET_LAYOUT_THEME', 'layout--black')
+  }
+
+  constructor(props) {
+    super(props)
+    this.slider = React.createRef()
+  }
+
+  render() {
+    return (
+      <div className="afisha-page page">
+        <ScrollEventsArea
+          onScrollUp={e => {
+            e.preventDefault()
+            if (this.isSliderEnabled) {
+              this.slider.current.slickNext()
+              this.isSliderEnabled = false
+              setTimeout(() => {
+                this.isSliderEnabled = true
+              }, 1000);
+            }
+          }}
+          onScrollDown={e => {
+            e.preventDefault()
+            if (this.isSliderEnabled) {
+              this.slider.current.slickPrev()
+              this.isSliderEnabled = false
+              setTimeout(() => {
+                this.isSliderEnabled = true
+              }, 1000);
+            }
+          }}
+        >
+          <Slider className="page__slider dots-black" {...this.sliderSettings} ref={this.slider}>
+            <Slide1 />
+            <Slide2 />
+            <Slide3 />
+            <Slide4 />
+            <Slide5 />
+          </Slider>
+        </ScrollEventsArea>
+
+        <AnimatedScroll />
+
+      </div>
+    )
+  }
 }
 
-const defaultOptions = {
-  loop: true,
-  autoplay: true, 
-  animationData: animationScroll,
-  rendererSettings: {
-    preserveAspectRatio: 'xMidYMid slice'
-  }
-};
-
-export default () => (
-  <div className="afisha-page page">
-
-    <Slider className="page__slider dots-black" {...sliderSettings}>
-      <Slide1 />
-      <Slide2 />
-      <Slide3 />
-      <Slide4 />
-      <Slide5 />
-    </Slider>
-    <div className="animated-scroll animated-scroll--black">
-      <Lottie options={defaultOptions} width={50}/>
-    </div>
-    
-  </div>
-)
+export default AfishaPage

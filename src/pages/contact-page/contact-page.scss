@@ -1,8 +1,20 @@
  .contact-page {
-   padding-top: 170px;
+   padding-top: 10%;
    
   .map {
     float: right;
+    height: 85%;
+
+    @include breakpoint('large') {
+      height: 85%;
+    }
+    @include breakpoint('medium') {
+      height: 85%;
+    }
+
+    iframe {
+      height: 100%;
+    }
   }
 } 
   

@@ -1,13 +1,20 @@
 .contact-info {
-  width: 560px;
 
   &__quote {
     font: 32px $playfair;
     font-weight: bold;
-    color: $primary-color; 
     display: block;
     margin-bottom: 20px;
     position: relative;
+    color: $primary-color;
+
+    @include breakpoint('large') {
+      font-size: 26px;
+      margin-bottom: 10px;
+    }
+    @include breakpoint('large') {
+      font-size: 22px;
+    }
   }
 
   .contact-info__quote-icon {
@@ -18,34 +25,81 @@
     svg {
       path {
         fill: $pale-gray;
-        opacity: 0.5;
       }
     }
   }
 
   &__p {
     font: 18px $muller;
+    font-weight: 300;
     line-height: 31px;
-    letter-spacing: 2;
-    color: $dark-gray!important;
+    letter-spacing: 2px;
+    color: $dark-gray;
+
+    @include breakpoint('large') {
+      font-size: 14px;
+      line-height: 23px;
+      letter-spacing: 1px;
+    }
+    @include breakpoint('medium') {
+      font-size: 14px;
+      line-height: 23px;
+      letter-spacing: 0.5px;
+    }
   }
 
   &__address {
-    margin: 20px 0;
+    margin-top: 45px; 
+
+    @include breakpoint('large') {
+      margin-top: 20px;
+    }
+    @include breakpoint('medium') {
+      margin-top: 20px;
+    }
 
     li {
       font: 18px $muller;
       font-weight: bold;
       line-height: 31px;
+      letter-spacing: 1.8px;
       color: $almost-black;
-      margin: 10px 0;
+      margin-bottom: 20px;
+
+      @include breakpoint('large') {
+        font-size: 14px;
+        line-height: 23px;
+        letter-spacing: 1px;
+        margin-bottom: 10px;
+      }
+      @include breakpoint('medium') {
+        font-size: 14px;
+        line-height: 23px;
+        letter-spacing: 0.5px;
+        margin-bottom: 10px;
+      }
     }
 
     li i {
       margin-right: 20px;
+
+      @include breakpoint('large') {
+        margin-right: 10px;
+      }
+      @include breakpoint('medium') {
+        margin-right: 10px;
+      }
     }
 
     li svg {
+
+      @include breakpoint('large') {
+        width: 15px;
+      }
+      @include breakpoint('medium') {
+        width: 15px;
+      }
+
       path {
         fill: $almost-black;
       }

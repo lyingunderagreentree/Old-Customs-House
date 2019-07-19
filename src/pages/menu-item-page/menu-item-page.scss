@@ -1,0 +1,60 @@
+.menu-item-page {
+  padding-top: 10%;
+
+  .content-holder__item {
+    width: 55%;
+  }
+  
+  .menu-section {
+    margin-top: 20px;
+  }
+
+  .menu-section__item {
+    display: flex;
+    justify-content: space-between;
+    
+    p {
+      display: inline-block;
+      background: inherit;
+
+      @include breakpoint('large') {
+        font-size: 12px;
+        line-height: 18px;
+      }
+      @include breakpoint('medium') {
+        font-size: 12px;
+        line-height: 18px;
+      }
+    }
+
+    .position {
+      flex: 2;
+    }
+
+    .price {
+      flex: 0.5;
+      text-align: right;
+      white-space: nowrap;
+
+      &::before {
+        content: '...........................................................';
+      }
+    }
+  }
+}
+
+.menu-pic {
+  position: absolute;
+  top: 10%;
+  right: -25px;
+
+  @include breakpoint('large') {
+    top: 0;
+    right: 25px;
+    width: 40%;
+  }
+  @include breakpoint('medium') {
+    top: 0;
+    right: 25px;
+  }
+}

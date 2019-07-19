@@ -1,10 +1,17 @@
 .booking-form {
   margin: 20px 0;
-  width: 600px;
+  // width: 600px;
+
+  @include breakpoint('large') {
+    margin: 10px 0;
+  }
+  @include breakpoint('medium') {
+    margin: 10px 0;
+  }
 
   &__firstline {
     display: flex;
-    width: 550px;
+    // width: 550px;
   }
 
   &__secondline {

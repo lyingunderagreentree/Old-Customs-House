@@ -1,16 +1,24 @@
 .bttn {
-	width: 21.5rem;
+	width: 23%;
+	height: 3vw;
+	display: inline-block;
   background-color: transparent;
   border: 1px solid $primary-color;
-  padding: 17px 60px;
 	border-radius: 2px;
 	color: white;
 	text-align: center;
 	text-transform: uppercase;
 	font: 1rem $muller;
 	font-weight: bold;
-	margin-top: 80px; 
+	// margin-top: 80px; 
 	transition: background-color 0.2s ease-in;
+
+	@include breakpoint('large') {
+		font-size: 12px;
+	}
+	@include breakpoint('medium') {
+		font-size: 10px;
+	}
 
 	&:hover {
 		background-color: $primary-color;
@@ -19,22 +27,142 @@
 	}
 }
 
+.modal-button {
+  width: 23%;
+  height: 3vw;
+  background-color: transparent;
+  border: 1px solid $primary-color;
+	border-radius: 2px;
+	color: white;
+	text-align: center;
+	text-transform: uppercase;
+	font: 1rem $muller;
+	font-weight: bold;
+	margin-top: 80px; 
+  transition: background-color 0.2s ease-in;
+  
+  @include breakpoint('large') {
+		width: 27%;
+    margin-top: 50px;
+    font-size: 13px;	
+  }
+  @include breakpoint('medium') {
+		width: 35%;
+		font-size: 12px;
+		height: 5vw;
+	}
+
+  &:hover {
+    background-color: $primary-color;
+    cursor: pointer;
+    outline: none;
+  }
+  &:focus {
+    outline: none;
+  }
+}
+
 .bttn--side {
 	position: absolute;
-	top: calc(50% - 80px);
+	top: 50%;
 	left: -3rem;
 	transform: rotate(90deg);
-	font-size: 0.75rem;
 	z-index: 2;
+
+	.modal-button {
+		width: auto;
+		height: auto;
+		border: none;
+		margin: 0;
+		font-family: $muller;
+		font-weight: bolder;
+		letter-spacing: 3px;
+
+		@include breakpoint('hd') {
+			font-size: 12px;
+		}
+	
+		@include breakpoint('large') {
+			font-size: 10px;
+		}
+	
+		@include breakpoint('medium') {
+			font-size: 8px;
+		}
+		
+		@include breakpoint('small') {
+			font-size: 8px;
+		}
+
+		&:before {
+      content: '';
+      display: block;
+      position: absolute;
+      z-index: -1;
+      top: 0px;
+      left: -5px;
+      height: 100%;
+      background-color: $primary-color;
+      width: 0%;
+      transition: width 0.2s ease-in;
+    }
+  
+    &:hover {
+			color: white;
+			background-color: transparent;
+  
+      &:before {
+        width: 55%;
+      }
+    }
+	}
 }
 
 .bttn--back {
 	border: none;
-	color: $primary-color;
 	padding: 20px 0px;
 	font: 12px $muller;
 	text-align: left;
 	letter-spacing: 3.6px;
+	margin: 5px 0;
+
+	@include breakpoint('large') {
+		font-size: 8px;
+		letter-spacing: 2px;
+		padding: 0;
+		margin: 0;
+		width: 30%;
+	}
+	@include breakpoint('medium') {
+		font-size: 8px;
+		letter-spacing: 2px;
+		padding: 0;
+		margin: 0;
+		width: 30%;
+	}
+
+	a {
+		color: $primary-color;
+		margin-left: 15px;
+	}
+
+	i {
+		@include breakpoint('large') {
+			vertical-align: sub;
+		}
+		@include breakpoint('medium') {
+			vertical-align: sub;
+		}
+		
+		svg {
+			@include breakpoint('large') {
+				width: 50px;
+			}
+			@include breakpoint('medium') {
+				width: 50px;
+			}
+		}
+	}
 
 	&:hover {
 		background: transparent;
@@ -44,17 +172,27 @@
 .bttn--send {
 	margin: 20px 0;
 	background-color: $primary-color;
-	width: 20rem;
-}
+	width: 50%;
 
-.animated-scroll {
-  position: absolute;
-  bottom: 40px;
-	right: calc(50% - 25px);
-
-	&--black {
-		svg path {
-			stroke: $almost-black;
-		}
+	@include breakpoint('large') {
+		margin: 10px 0;
+	}
+	@include breakpoint('medium') {
+		margin: 10px 0;
 	}
 }
+
+// .animated-scroll {
+//   position: absolute;
+//   bottom: 40px;
+// 	margin-left: auto;
+// 	margin-right: auto;
+// 	left: 0;
+// 	right: 0;
+
+// 	&--black {
+// 		svg path {
+// 			stroke: $almost-black;
+// 		}
+// 	}
+// }

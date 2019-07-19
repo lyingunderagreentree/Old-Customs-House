@@ -1,8 +1,13 @@
 .main-page {
 
   &__name {
-    width: 45rem;
-    padding-top: 170px;
+    width: 50%;
+    padding-top: 15%;
+
+    @include breakpoint('medium') {
+      width: 60%;
+      padding-top: 25%;
+    }
 
     span {
       display: block;

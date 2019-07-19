@@ -2,23 +2,25 @@ import React from 'react'
 import Slider from 'react-slick'
 import slide1 from './img/test.jpg'
 import '../afisha-slider.scss'
+import Date from '../../components/date/date'
 
 const sliderSettings = {
-  dots: false,
-  speed: 300,
+  dots: true,
+  speed: 500,
   slidesToShow: 1,
   arrows: true
 }
 
 export default () => (
-  <div className="slide1 slide">
-    <div className="container">
-      <div className="container--double">
-
-        <div className="container--double__item">
+  <div className="slide1 slide columns">
+    <div className="container column is-10 is-10-mobile">
+      <div className="content-holder">
+        <div className="content-holder__item">
           <div>  
             <h2>Jazz вечера</h2>
           </div>
+
+          <Date />
 
           <div className="text-block">
             <p>Каждый вечер с понедельника по субботу в ресторане «Старая Таможня» звучит прекрасный легкий джаз – 
@@ -33,7 +35,7 @@ export default () => (
           </div>
         </div>
 
-        <div className="container--double__item">
+        <div className="content-holder__item">
 
           <Slider className="afisha-slider" {...sliderSettings}>
             <img src={slide1}/>
@@ -44,6 +46,7 @@ export default () => (
           </Slider>
 
         </div>
+
       </div>
     </div>
   </div>

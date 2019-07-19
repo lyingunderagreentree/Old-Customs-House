@@ -3,13 +3,10 @@ import aboutPagePic1 from './img/About_1.jpg'
 
 export default () => (
 
-  <div className="slide1 slide">
-
-    <div className="container">
-
-      <div className="container--half">
-
-        <div className="container--half__item">
+  <div className="slide1 slide columns">
+    <div className="container column is-10 is-10-mobile">
+      <div className="content-holder">
+        <div className="content-holder__item">
 
           <div><h2>О ресторане</h2></div>
 

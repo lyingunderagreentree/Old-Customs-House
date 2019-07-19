@@ -1,16 +1,33 @@
 @import '../../node_modules/normalize.css/normalize.css';
 @import '../../node_modules/bulma/css/bulma.min.css';
 @import '../../node_modules/slick-carousel/slick/slick.css';
-@import './fonts.scss';
+@import './typography.scss';
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
   position: relative;
+
+  @include breakpoint('hd') {
+    font-size: 16px;
+  }
+
+  @include breakpoint('large') {
+    font-size: 14px;
+  }
+
+  @include breakpoint('medium') {
+    font-size: 14px;
+  }
+
+  @include breakpoint('small') {
+    font-size: 12px;
+  }
 }
 
 .min-height {
@@ -22,33 +39,62 @@ body {
   overflow: hidden;
 }
 
-.container {
-  min-width: 1500px;
-  //padding: 0 37px;
+.columns {
+  margin: 0;
+  padding: 0;
 
-  &--half {
-    display: flex;
+  .column {
+    padding: 0;
 
-    &__item {
-      width: 50%;
+    &:last-child {
+      margin-bottom: 0;
     }
   }
+}
 
-  &--double {
-    display: flex;
+// .page .container {
+//   // padding: 0 37px;
 
-    &__item {
-      display: flex;
-      flex-direction: column;
-      width: 40%;
-      margin-right: 10rem;
-    }
-  }
+//   // @include breakpoint('hd') {
+//   //   max-width: 1500px;
+//   // }
 
-  &--menu {
+//   // @include breakpoint('large') {
+//   //   max-width: 1250px;
+//   // }
+
+//   // @include breakpoint('medium') {
+//   //   max-width: 892px;
+//   // }
+
+//   // @include breakpoint('small') {
+//   //   max-width: 350px;
+//   // }
+// }
+
+.container .content-holder {
+  display: flex;
+  justify-content: space-between;
+
+  &__item {
     display: flex;
     flex-direction: column;
-    width: 55%;
+    width: 45%;
+    margin-right: 5%;
+  }
+
+  &--reverse {
+    flex-direction: row-reverse;
+
+    .content-holder__item {
+      &:first-child {
+        margin-right: 10%;
+
+        @include breakpoint('medium') {
+          margin-right: 6%;
+        }
+      }
+    }
   }
 }
 
@@ -59,6 +105,7 @@ body {
 }
 
 .space-between {
+  display: flex;
   justify-content: space-between;
 }
 
@@ -68,13 +115,7 @@ body {
   top: 0;
   width: 100vw;
   min-height: 100vh;
-
-  &--main {
-    
-  }
-
-  &--img {
-  }
+  object-fit: cover;
 
   &--menu {
     background-image: url(../pages/menu-page/img/menu-back.jpg);
@@ -83,80 +124,25 @@ body {
 
 .text-block {
   max-width: 600px;
-}
+  margin-top: 30px;
 
-h1 {
-  color: white;
-  font-size: 5rem;
-  font-weight: bold;
-  line-height: 1.13;
-  letter-spacing: 0.1rem;
-  font-family: $playfair;
-}
-
-h2 {
-  font-size: 4.0625rem;
-  font-family: $playfair;
-  font-weight: bold;
-  line-height: 1.1;
-  color: $primary-color;
-  display: inline-block;
-  margin-bottom: 30px;
-  overflow: hidden;
-  padding-bottom: 21px; 
-
-  &::after {
-    content: '';
-    display: inline-block;
-    vertical-align: bottom;
-    height: 1px;
-    box-shadow: -98vw 100vw 0 99vw;
-    color: $dark-gray;
-  }
-}
-
-p {
-  font-family: $muller;
-  font-size: 1.125rem;
-  line-height: 1.6625rem;
-  color: white;
-  margin-bottom: 20px;
-  letter-spacing: 0.6px;
-}
-
-a {
-  font-size: 0.75rem;
-  font-family: $muller;
-  font-weight: bold; 
-  line-height: 1.13;
-  letter-spacing: 1.6px;
-  text-transform: uppercase;
-  position: relative;
-  
-  &:before {
-    content: '';
-    display: block;
-    position: absolute;
-    z-index: -1;
-    top: -5px;
-    left: -3px;
-    height: 100%;
-    padding: 10px 0;
-    background-color: $primary-color;
-    width: 0%;
-    transition: width 0.2s ease-in;
+  @include breakpoint('large') {
+    margin-top: 15px;
   }
 
-  &:hover {
-    color: white;
-
-    &:before {
-      width: 55%;
-    }
-    
+  @include breakpoint('medium') {
+    margin-top: 15px;
   }
 }
 
 .primary-color {
   color: $primary-color;
+}
+
+.switch-wrapper {
+  position: relative;
+}
+ 
+.switch-wrapper > div {
+  position: absolute;
 }

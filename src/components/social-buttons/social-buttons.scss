@@ -1,8 +1,35 @@
 .social-buttons {
   display: inline-flex;
 
+
+
   &__item {
     margin-right: 46px;
+    width: 20px;
+    height: 20px;
+
+    @include breakpoint('hd') {
+      width: 20px;
+    }
+
+    @include breakpoint('large') {
+      width: 12px;
+    }
+
+    @include breakpoint('medium') {
+      width: 10px;
+    }
+
+    .social-buttons__icon {
+      svg {
+        vertical-align: super;
+        width: 100%;
+
+        g {
+          display: contents;
+        }
+      }
+    }
 
     &:last-child {
       margin-right: 0;

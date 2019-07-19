@@ -8,12 +8,30 @@
     color: inherit;
   }
 
+  .header__logo a:hover {
+    &::before {
+      display: none;
+    }
+  }
+
   svg g path {
     fill: white;
   }
 
   &--black {
     color: $almost-black;
+
+    .bttn--side button {
+      color: $almost-black;
+
+      &:hover {
+        color: $almost-black;
+      }
+    }
+
+    a:hover {
+      color: $almost-black;
+    }
     
     svg g path {
       fill: $almost-black;

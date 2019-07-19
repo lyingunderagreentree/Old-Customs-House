@@ -1,0 +1,46 @@
+.animated-scroll {
+  width: 50px;
+  position: absolute;
+  bottom: 40px;
+	margin-left: auto;
+	margin-right: auto;
+	left: 0;
+	right: 0;
+
+  @include breakpoint('large') {
+    width: 40px;
+  }
+  @include breakpoint('medium') {
+    width: 30px;
+  }
+
+  &--black {
+		svg path {
+			stroke: $almost-black;
+		}
+	}
+
+  &__text {
+    font: 9px $muller;
+    font-weight: 600;
+    letter-spacing: 2.75px;
+    text-transform: uppercase;
+    color: inherit;
+    margin-bottom: -10px;
+    display: block;
+
+    @include breakpoint('large') {
+      font-size: 7px;
+      letter-spacing: 1.5px;
+    }
+    @include breakpoint('medium') {
+      font-size: 7px;
+      letter-spacing: 1.5px;
+      margin-left: -2px; 
+    }
+  }
+  
+  svg path {
+    fill: inherit;
+  }
+}

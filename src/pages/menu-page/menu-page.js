@@ -1,39 +1,53 @@
 import React from 'react'
 import './menu-page.scss'
 import mainMenuPic from './img/main-menu.png'
+import eventEmitter from '../../utils/eventEmitter'
+import { Link } from 'react-router-dom'
 
-export default () => (
-  <div className="menu-page page">
+class MenuPage extends React.Component {
+  componentDidMount() {
+    eventEmitter.emit('SET_LAYOUT_THEME', '')
+  }
 
-    <div className="background background--menu"></div>
+  render() {
+    return (
+      <div className="menu-page page columns">
 
-    <div className="container">
+        <div className="background background--menu"></div>
 
-      <div className="container--menu">
+        <div className="container column is-10 is-10-mobile">
 
-        <div><h2>Меню</h2></div>
-        <ul className="menu-list">
-          <li className="menu-list__item"><a>Горячие закуски</a></li>
-          <li className="menu-list__item"><a>Холодные закуски</a></li>
-          <li className="menu-list__item"><a>Супы</a></li>
-          <li className="menu-list__item"><a>Дикие морепродукты</a></li>
-          <li className="menu-list__item"><a>Горячие рыбные блюда</a></li>
-          <li className="menu-list__item"><a>Горячие мясные блюда</a></li>
-          <li className="menu-list__item"><a>Гарниры</a></li>
-          <li className="menu-list__item"><a>Десерты</a></li>
-          <li className="menu-list__item"><a>Молекулярная кухня</a></li>
-          <li className="menu-list__item"><a>Вегетарианское меню</a></li>
-          <li className="menu-list__item"><a>Банкетное меню</a></li>
-          <li className="menu-list__item"><a>Винная карта</a></li>
-          <li className="menu-list__item"><a>Напитки</a></li>
-        </ul>
+          <div className="content-holder">
+            <div className="content-holder__item">
 
+              <div><h2>Меню</h2></div>
+              <ul className="menu-list">
+                <li className="menu-list__item"><Link to='/menu-item-page' className="highlighted">Горячие закуски</Link></li>
+                <li className="menu-list__item"><Link to='/menu-item-page' className="highlighted">Холодные закуски</Link></li>
+                <li className="menu-list__item"><Link to='/menu-item-page' className="highlighted">Супы</Link></li>
+                <li className="menu-list__item"><Link to='/menu-item-page' className="highlighted">Дикие морепродукты</Link></li>
+                <li className="menu-list__item"><Link to='/menu-item-page' className="highlighted">Горячие рыбные блюда</Link></li>
+                <li className="menu-list__item"><Link to='/menu-item-page' className="highlighted">Горячие мясные блюда</Link></li>
+                <li className="menu-list__item"><Link to='/menu-item-page' className="highlighted">Гарниры</Link></li>
+                <li className="menu-list__item"><Link to='/menu-item-page' className="highlighted">Десерты</Link></li>
+                <li className="menu-list__item"><Link to='/menu-item-page' className="highlighted">Молекулярная кухня</Link></li>
+                <li className="menu-list__item"><Link to='/menu-item-page' className="highlighted">Вегетарианское меню</Link></li>
+                <li className="menu-list__item"><Link to='/menu-item-page' className="highlighted">Банкетное меню</Link></li>
+                <li className="menu-list__item"><Link to='/menu-item-page' className="highlighted">Винная карта</Link></li>
+                <li className="menu-list__item"><Link to='/menu-item-page' className="highlighted">Напитки</Link></li>
+              </ul>
+
+            </div>
+          </div>
+
+          <div className="menu-pic">
+            <img src={mainMenuPic}/>
+          </div>
+
+        </div>
       </div>
+    )
+  }
+}
 
-      <div className="menu-pic">
-        <img src={mainMenuPic}/>
-      </div>
-
-    </div>
-  </div>
-)
+export default MenuPage

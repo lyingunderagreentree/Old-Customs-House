@@ -11,7 +11,7 @@ export default () => (
   <div className="contact-info">
     
     <span className="contact-info__quote">
-      Мир меняется, Старая Таможня остается прежней!
+      Мир меняется, Старая Таможня <span className="primary-color">остается прежней!</span>
       <InlineSVG className="contact-info__quote-icon" src={qoute} />
     </span>
     <p className="contact-info__p">С 1996 года ресторан бережно хранит свои лучшие традиции. 

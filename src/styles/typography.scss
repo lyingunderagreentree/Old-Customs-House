@@ -1,0 +1,138 @@
+@import './fonts.scss';
+
+h1 {
+  color: white;
+  font-weight: bold;
+  line-height: 1.13;
+  letter-spacing: 0.1rem;
+  font-family: $playfair;
+  font-size: 80px;
+
+  @include breakpoint('hd') {
+    font-size: 80px;
+  }
+
+  @include breakpoint('large') {
+    font-size: 54px;
+  }
+
+  @include breakpoint('medium') {
+    font-size: 50px;
+  }
+
+  @include breakpoint('small') {
+    font-size: 40px;
+  }
+}
+
+h2 {
+  font-family: $playfair;
+  font-weight: bold;
+  line-height: 1.1;
+  color: $primary-color;
+  display: inline-block;
+  overflow: hidden;
+  padding-bottom: 1.2vw; 
+
+  @include breakpoint('hd') {
+    font-size: 65px;
+  }
+  @include breakpoint('large') {
+    font-size: 50px;
+  }
+  @include breakpoint('medium') {
+    font-size: 45px;
+  }
+
+  &::after {
+    content: '';
+    display: inline-block;
+    vertical-align: bottom;
+    box-shadow: -98vw 100vw 0 99vw;
+    color: $dark-gray;
+  }
+}
+
+p {
+  font-family: $muller;
+  font-weight: 300;
+  color: white;
+  margin-bottom: 20px;
+  letter-spacing: 0.6px;
+
+  @include breakpoint('hd') {
+    font-size: 1.125rem;
+    line-height: 1.6625rem;
+  }
+  @include breakpoint('large') {
+    font-size: 14px;
+    line-height: 21px;
+    letter-spacing: 0.4px;
+  }
+  @include breakpoint('medium') {
+    font-size: 13px;
+    line-height: 19px;
+    letter-spacing: 0.3px;
+  }
+}
+
+a {
+  font-family: $muller;
+  font-weight: bold; 
+  line-height: 1.13;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+  position: relative;
+
+  @include breakpoint('hd') {
+    font-size: 12px;
+  }
+
+  @include breakpoint('large') {
+    font-size: 10px;
+  }
+
+  @include breakpoint('medium') {
+    font-size: 10px;
+  }
+  
+  @include breakpoint('small') {
+    font-size: 8px;
+  }
+
+  &.highlighted {
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      z-index: -1;
+      top: -5px;
+      left: -3px;
+      height: 100%;
+      padding: 10px 0;
+      background-color: $primary-color;
+      width: 0%;
+      transition: width 0.2s ease-in;
+
+      // @include breakpoint('large') {
+      //   padding: 8px 0;
+      // }
+    
+      // @include breakpoint('medium') {
+      //   padding: 10px 0;
+      // }
+      
+      @include breakpoint('small') {
+        
+      }
+    }
+  
+    &:hover {
+      color: white;
+  
+      &:before {
+        width: 55%;
+      }
+    }
+  }
+}

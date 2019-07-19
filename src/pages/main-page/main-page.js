@@ -1,22 +1,48 @@
 import React from 'react'
 import './main-page.scss'
+import eventEmitter from '../../utils/eventEmitter'
+// import BackgroundVideo from '../../components/background-video/background-video'
+import BookingModal from '../../components/modal/custom-modals/booking'
+import Modal from '../../components/modal/modal'
 
-export default () => (
+class MainPage extends React.Component {
 
-  <div className="main-page page">        
+  modalProps = {
+    triggerText: "Забронировать стол"
+  }
 
-    <div className="container">
+  modalContent = (
+    <BookingModal />
+  )
 
-      <div className="main-page__name">
-        <h1>Ресторан высокой кухни
-        <span className="primary-color"> с многолетней историей</span></h1>
+  componentDidMount() {
+    eventEmitter.emit('SET_LAYOUT_THEME', '')
+  }
+
+  render() {
+    return (
+      <div className="main-page page columns">      
+        <div className="background background--main"></div>
+
+        <div className="container column is-10 is-10-mobile">
+
+          <div className="main-page__name">
+            <h1>Ресторан <br />высокой кухни
+              <span className="primary-color"> с многолетней историей</span>
+            </h1>
+          </div>
+
+          <Modal modalProps={this.modalProps} modalContent={this.modalContent} />
+          
+        </div>
+
+        {/* <BackgroundVideo /> */}
+
       </div>
-      <div className="bttn">Забронировать стол</div>
-      
-    </div>
+    )
+  }
+}
 
-    <div className="background background--main"></div>
+export default MainPage
 
-  </div>
-
-)
+  

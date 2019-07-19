@@ -1,6 +1,5 @@
 import React from 'react'
 import './social-buttons.scss'
-//import youtubeIcon from './img/youtube.png'
 import InlineSVG from 'svg-inline-react'
 import facebook from '../footer/img/Facebook.svg'
 import instagram from '../footer/img/Inst.svg'

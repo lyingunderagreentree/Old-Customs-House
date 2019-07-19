@@ -1,12 +1,25 @@
 .menu-page {
-  padding-top: 250px;
+  padding-top: 10%;
+
+  .menu-list {
+    margin-top: 20px;
+  }
 
   .menu-list__item {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
+
+    @include breakpoint('large') {
+      margin-bottom: 10px;
+    }
+
+    @include breakpoint('medium') {
+      margin-bottom: 10px;
+    }
     
     a {
       display: inline-block;
       color: white;
+      padding: 0;
 
       &:hover {
         background: transparent;
