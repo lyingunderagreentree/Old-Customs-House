@@ -1,6 +1,5 @@
 .booking-form {
   margin: 20px 0;
-  // width: 600px;
 
   @include breakpoint('large') {
     margin: 10px 0;
@@ -8,22 +7,40 @@
   @include breakpoint('medium') {
     margin: 10px 0;
   }
+  @include breakpoint('small') {
+    margin: 0;
+  }
 
   &__firstline {
     display: flex;
-    // width: 550px;
+
+    @include breakpoint('small') {
+      flex-wrap: wrap;
+    }
   }
 
   &__secondline {
     display: flex;
+
+    @include breakpoint('small') {
+      flex-wrap: wrap;
+    }
   }
 
   .input {
     flex-basis: 110px;
     margin-right: 40px;
 
+    @include breakpoint('small') {
+      margin-right: 0;
+    }
+
     &.input-day {
       flex-grow: 3;
+
+      @include breakpoint('small') {
+        margin-right: 20px;
+      }
     }
 
     &.input-time {
@@ -36,10 +53,18 @@
 
     &.input-counter {
       flex-grow: 2;
+
+      @include breakpoint('small') {
+        flex-grow: 0;
+      }
     }
 
     &.input-text {
       flex-grow: 2.4;
+
+      @include breakpoint('small') {
+        flex: 100%;
+      }
     }
 
     &.input-number {

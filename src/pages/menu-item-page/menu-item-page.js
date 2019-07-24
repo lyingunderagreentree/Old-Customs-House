@@ -15,7 +15,7 @@ class MenuPageItem extends React.Component {
     return (
       <div className="menu-item-page page columns">
 
-        <div className="background background--menu"></div>
+        <div className="background background--menu is-hidden-mobile"></div>
     
         <div className="container column is-10 is-10-mobile">
           <div className="content-holder">

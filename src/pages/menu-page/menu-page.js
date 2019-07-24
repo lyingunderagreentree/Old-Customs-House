@@ -13,7 +13,7 @@ class MenuPage extends React.Component {
     return (
       <div className="menu-page page columns">
 
-        <div className="background background--menu"></div>
+        <div className="background background--menu is-hidden-mobile"></div>
 
         <div className="container column is-10 is-10-mobile">
 
@@ -40,7 +40,7 @@ class MenuPage extends React.Component {
             </div>
           </div>
 
-          <div className="menu-pic">
+          <div className="menu-pic is-hidden-mobile">
             <img src={mainMenuPic}/>
           </div>
 

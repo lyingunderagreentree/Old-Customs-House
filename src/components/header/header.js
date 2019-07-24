@@ -13,11 +13,11 @@ export default () => (
 
 		<div className="container column is-10 is-10-mobile">
 
-			<div className="columns space-between">
-				<div className="header__logo column is-3 is-4-mobile">
+			<div className="columns flex-container">
+				<div className="header__logo column is-3 is-9-mobile">
 					<Link to='/'><InlineSVG src={logo} /></Link>
 				</div>
-				<div className="column is-6-mobile is-6">
+				<div className="column is-12-mobile is-6">
 					<Navigation />		
 				</div>
 			</div>

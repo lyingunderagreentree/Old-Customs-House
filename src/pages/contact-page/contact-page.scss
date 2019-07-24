@@ -1,5 +1,32 @@
  .contact-page {
-   padding-top: 10%;
+  padding-top: 10%;
+
+  @include breakpoint('small') {
+    padding-top: 0;
+  }
+
+  h2 {
+    @include breakpoint('small') {
+      position: absolute;
+      top: 55px;
+    }
+
+    &::after {
+      color: $pale-gray;
+    }
+  }
+
+  .contact-info__mobile {
+    @include breakpoint('small') {
+      display: none;
+    }
+  }
+
+  .contact-info__address {
+    @include breakpoint('small') {
+      margin-top: 20px;
+    }
+  }
    
   .map {
     float: right;
@@ -10,6 +37,13 @@
     }
     @include breakpoint('medium') {
       height: 85%;
+    }
+    @include breakpoint('small') {
+      height: 300px;
+      width: 100vw;
+      margin-bottom: 10px;
+      margin-left: -10%;
+      margin-top: 125px;
     }
 
     iframe {

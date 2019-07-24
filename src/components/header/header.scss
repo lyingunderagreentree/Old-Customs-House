@@ -8,6 +8,16 @@
 		padding: 0;
 		margin: 0 0.75rem;
 
+		@include breakpoint('small') {
+			position: absolute;
+			left: 0;
+			right: 0;
+			margin-left: auto;
+			margin-right: auto;
+			top: 70px;
+			display: none;
+		}
+
 		a i svg {
 			width: 100%;
 		}

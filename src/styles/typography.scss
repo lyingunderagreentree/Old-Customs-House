@@ -21,7 +21,8 @@ h1 {
   }
 
   @include breakpoint('small') {
-    font-size: 40px;
+    font-size: 10vw;
+    line-height: 11vw;
   }
 }
 
@@ -32,7 +33,8 @@ h2 {
   color: $primary-color;
   display: inline-block;
   overflow: hidden;
-  padding-bottom: 1.2vw; 
+  padding-bottom: 1.1vw; 
+  font-size: 65px;
 
   @include breakpoint('hd') {
     font-size: 65px;
@@ -41,14 +43,19 @@ h2 {
     font-size: 50px;
   }
   @include breakpoint('medium') {
-    font-size: 45px;
+    font-size: 30px;
+    line-height: 50px;
+  }
+  @include breakpoint('small') {
+    font-size: 26px;
+    line-height: 47px;
   }
 
   &::after {
     content: '';
     display: inline-block;
     vertical-align: bottom;
-    box-shadow: -98vw 100vw 0 99vw;
+    box-shadow: -98vw 100vw 0 99.1vw;
     color: $dark-gray;
   }
 }
@@ -70,8 +77,13 @@ p {
     letter-spacing: 0.4px;
   }
   @include breakpoint('medium') {
-    font-size: 13px;
+    font-size: 14px;
     line-height: 19px;
+    letter-spacing: 0.3px;
+  }
+  @include breakpoint('small') {
+    font-size: 16px;
+    line-height: 21px;
     letter-spacing: 0.3px;
   }
 }

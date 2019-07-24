@@ -16,6 +16,7 @@ class ContactPage extends React.Component {
         <div className="container column is-10 is-10-mobile">
           <div className="content-holder">
             <div className="content-holder__item">
+              <h2 className="on-mobile">Контакты</h2>
 
               <ContactInfo />
 

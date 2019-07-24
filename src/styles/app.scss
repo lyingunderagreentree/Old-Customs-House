@@ -37,6 +37,10 @@ body {
   justify-content: space-between;
   position: relative;
   overflow: hidden;
+
+  @include breakpoint('small') {
+    justify-content: flex-start;
+  }
 }
 
 .columns {
@@ -52,35 +56,25 @@ body {
   }
 }
 
-// .page .container {
-//   // padding: 0 37px;
-
-//   // @include breakpoint('hd') {
-//   //   max-width: 1500px;
-//   // }
-
-//   // @include breakpoint('large') {
-//   //   max-width: 1250px;
-//   // }
-
-//   // @include breakpoint('medium') {
-//   //   max-width: 892px;
-//   // }
-
-//   // @include breakpoint('small') {
-//   //   max-width: 350px;
-//   // }
-// }
-
 .container .content-holder {
   display: flex;
   justify-content: space-between;
+
+  @include breakpoint('small') {
+    flex-direction: column-reverse;
+    margin-bottom: 20px;
+  } 
 
   &__item {
     display: flex;
     flex-direction: column;
     width: 45%;
     margin-right: 5%;
+
+    @include breakpoint('small') {
+      width: 100%;
+      margin-right: 0;
+    }
   }
 
   &--reverse {
@@ -104,9 +98,13 @@ body {
   height: 100vh;
 }
 
-.space-between {
+.flex-container {
   display: flex;
   justify-content: space-between;
+
+  @include breakpoint('small') {
+    justify-content: flex-end;
+  }
 }
 
 .background {
@@ -119,6 +117,14 @@ body {
 
   &--menu {
     background-image: url(../pages/menu-page/img/menu-back.jpg);
+  }
+
+  &--img {
+    @include breakpoint('small') {
+      position: static;
+      min-height: 300px;
+      margin-bottom: 50px
+    }
   }
 }
 
@@ -145,4 +151,12 @@ body {
  
 .switch-wrapper > div {
   position: absolute;
+}
+
+.on-mobile {
+  display: none;
+
+  @include breakpoint('small') {
+    display: block;
+  }
 }

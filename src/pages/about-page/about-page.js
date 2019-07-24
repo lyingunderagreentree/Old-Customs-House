@@ -24,7 +24,18 @@ class AboutPage extends React.Component {
     infinite: false,
     useTransform: true,
     draggable: false,
-    cssEase: 'cubic-bezier(0.445, 0.050, 0.550, 0.950)' 
+    cssEase: 'cubic-bezier(0.445, 0.050, 0.550, 0.950)',
+    responsive: [
+      {
+        breakpoint: 677,
+        settings: {
+          vertical: false,
+          // touchMove: false,
+          // swipe: false,
+          apadtiveHeight: true
+        }
+      } 
+    ]
   }
 
   constructor(props) {
@@ -39,7 +50,7 @@ class AboutPage extends React.Component {
   render() {
     return (
       <div className="about-page page">
-
+        
         <ScrollEventsArea
           onScrollUp={e => {
             e.preventDefault()

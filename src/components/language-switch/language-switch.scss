@@ -1,5 +1,11 @@
 .language-switch {
   margin-right: -12px;
+
+  @include breakpoint('small') {
+    position: absolute;
+    left: -8px;
+    top: 10px;
+  }
   
   &__item {
     margin: 0 10px;

@@ -1,8 +1,18 @@
 .page__slider {
   user-select: text;
 
+  @include breakpoint('small') {
+    touch-action: pan-y;
+    -ms-touch-action: pan-y;
+    overflow: hidden;
+  }
+
   &.slick-slider .slick-list {
     height: 100vh!important;
+
+    @include breakpoint('small') {
+      height: 100%!important;
+    }
   }
 
   .slick-list .slick-track {
@@ -14,6 +24,14 @@
     padding-top: 10%; 
     position: relative;
     width: 100%;
+
+    @include breakpoint('small') {
+      height: 100%;
+      display: flex;
+      flex-direction: column-reverse;
+      justify-content: flex-end;
+      padding-top: 0; 
+    }
   }
 
   .slick-dots {
@@ -21,6 +39,15 @@
     right: 8vw;
     top: calc(50% - 75px);
     text-align: right;
+
+    @include breakpoint('small') {
+      right: 0;
+      left: 0;
+      top: 320px;
+      display: inline-flex!important;
+      align-items: center;
+      justify-content: center;
+    }
 
     li button {
       color: white;
@@ -38,6 +65,20 @@
       @include breakpoint('medium') {
         font-size: 12px;
         line-height: 15px;
+      }
+      @include breakpoint('small') {
+        background-color: gray;
+        border: 6px solid gray;
+        border-radius: 50% 50%;
+        font-size: 0;
+        width: 10px;
+        height: 10px;
+        margin: 7px;
+        line-height: 0;
+
+        &::before {
+          content: '';
+        }
       }
 
       &::before {
@@ -65,6 +106,7 @@
       font: 26px $muller;
       line-height: 33px;
       outline: none;
+      
 
       @include breakpoint('large') {
         font-size: 20px;
@@ -73,6 +115,16 @@
       @include breakpoint('medium') {
         font-size: 20px;
         line-height: 25px;
+      }
+      @include breakpoint('small') {
+        font-size: 0px;
+        line-height: 0;
+        border-color: $primary-color;
+        background-color: $primary-color;
+
+        &::after {
+          display: none;
+        }
       }
 
       &::before {

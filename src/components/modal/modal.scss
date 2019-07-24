@@ -19,7 +19,11 @@
   box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.1);
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
-}
+
+  @include breakpoint('small') {
+    padding: 0;
+  }
+ }
 
 .modal-body {
   padding-top: 0.25em;
@@ -27,10 +31,22 @@
   margin: 0 auto;
   position: relative;
 
+  @include breakpoint('large') {
+    max-width: 760px;
+  }
+  @include breakpoint('medium') {
+    max-width: 760px;
+  }
+  @include breakpoint('small') {
+    display: flex;
+    justify-content: center;
+    min-height: 110%;
+  }
+
   ._modal-close {
     position: absolute;
-    top: 80px;
-    right: 120px;
+    top: 40px;
+    right: 40px;
     line-height: 1;
     background: transparent;
     border: 0;
@@ -39,6 +55,11 @@
 
     &:focus {
       outline: none;
+    }
+
+    @include breakpoint('small') {
+      top: 50px;
+      right: auto;
     }
   }
   

@@ -16,7 +16,6 @@ import ContactPage from '../pages/contact-page/contact-page'
 class App extends Component {
 	
 	render() {
-		
 		return (
 			<React.Fragment>
 				<Router>

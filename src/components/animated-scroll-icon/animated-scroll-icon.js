@@ -15,13 +15,12 @@ class AnimatedScroll extends React.Component {
 
   render() {
     return (
-      <div className="animated-scroll">
+      <div className="animated-scroll is-hidden-mobile">
         <span className="animated-scroll__text">scroll</span>
         <Lottie options={this.defaultOptions} width={'100%'}/>
       </div>
     )
   }
 }
-
 
 export default AnimatedScroll

@@ -4,6 +4,9 @@ import eventEmitter from '../../utils/eventEmitter'
 // import BackgroundVideo from '../../components/background-video/background-video'
 import BookingModal from '../../components/modal/custom-modals/booking'
 import Modal from '../../components/modal/modal'
+import InlineSVG from 'svg-inline-react'
+import logo from '../../components/header/img/logo.svg'
+import { Link } from 'react-router-dom'
 
 class MainPage extends React.Component {
 
@@ -23,14 +26,17 @@ class MainPage extends React.Component {
     return (
       <div className="main-page page columns">      
         <div className="background background--main"></div>
-
+        
         <div className="container column is-10 is-10-mobile">
+          <div className="logo-mobile"><Link to='/'><InlineSVG src={logo} /></Link></div>
 
           <div className="main-page__name">
             <h1>Ресторан <br />высокой кухни
               <span className="primary-color"> с многолетней историей</span>
             </h1>
           </div>
+
+          <p className="main-page__p">— since 1996 —</p>
 
           <Modal modalProps={this.modalProps} modalContent={this.modalContent} />
           

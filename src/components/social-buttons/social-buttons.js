@@ -6,7 +6,7 @@ import instagram from '../footer/img/Inst.svg'
 import youtube from '../footer/img/youtube.svg'
 
 export default() => (
-  <ul className="social-buttons">
+  <ul className="social-buttons is-hidden-mobile">
     <li className="social-buttons__item"><InlineSVG className="social-buttons__icon" src={facebook} /></li>
     <li className="social-buttons__item"><InlineSVG className="social-buttons__icon" src={instagram} /></li>
     <li className="social-buttons__item"><InlineSVG className="social-buttons__icon" src={youtube} /></li>

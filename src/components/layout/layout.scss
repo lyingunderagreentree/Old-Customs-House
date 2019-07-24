@@ -3,6 +3,7 @@
   width: 100vw;
   height: 100vh;
   color: white;
+  fill: white;
 
   a, p {
     color: inherit;
@@ -20,6 +21,7 @@
 
   &--black {
     color: $almost-black;
+    fill: $almost-black;
 
     .bttn--side button {
       color: $almost-black;
@@ -40,6 +42,8 @@
     .page__slider .slick-dots li button {
       color: $almost-black;
     }
+
+
   }
 }
   

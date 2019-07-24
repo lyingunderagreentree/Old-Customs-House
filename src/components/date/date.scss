@@ -2,6 +2,10 @@
   display: flex;
   align-items: stretch; 
 
+  @include breakpoint('small') {
+    display: none;
+  }
+
   p {
     font: 18px $muller;
     font-weight: bold;

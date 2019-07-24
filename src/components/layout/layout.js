@@ -38,7 +38,7 @@ class Layout extends React.Component {
           {this.props.children}
           <Footer />
           
-          <div className="bttn--side">
+          <div className="bttn--side is-hidden-mobile">
             <Modal modalProps={this.modalProps} modalContent={this.modalContent} />
           </div>  
 

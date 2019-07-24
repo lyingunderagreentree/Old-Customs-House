@@ -1,4 +1,86 @@
-.navigation {
+.header .navigation {
   display: flex;
   justify-content: space-between;
+
+  @include breakpoint('small') {
+    position: absolute;
+    top: 20px;
+  }
+}
+
+.bm-overlay {
+  background-color: $almost-black!important;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+
+.bm-menu-wrap {
+  text-align: center;
+  right: 0;
+  left: 0;
+  margin-right: auto;
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .bm-cross-button {
+    margin-right: 20px;
+    margin-top: 18px;
+    z-index: 2000;
+
+    .bm-cross {
+      background-color: white;
+      min-height: 20px;
+    }
+  }
+}
+
+.header .bm-burger-button {
+  position: absolute;
+  top: 30px;
+  right: 0;
+  width: 26px;
+  height: 14px;
+  display: none;
+  z-index: 500!important;
+
+  @include breakpoint('small') {
+    display: block;
+  }
+}
+
+.bm-menu {
+  height: auto!important;
+
+  .bm-item {
+    font-size: 24px;
+    margin: 30px 0;
+    color: white;
+    position: relative;
+
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      z-index: -1;
+      top: -3px;
+      left: -3px;
+      height: 100%;
+      padding: 10px 0;
+      background-color: $primary-color;
+      width: 0%;
+      transition: width 0.2s ease-in;
+    }
+
+    &:hover, &:focus {
+      color: white;
+      outline: none;
+
+      &:before {
+        width: 55%;
+      }
+    }
+  }
 }

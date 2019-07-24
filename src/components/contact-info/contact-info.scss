@@ -105,4 +105,21 @@
       }
     }
   }
+
+  &__mobile {
+    margin-top: 30%; 
+    text-align: center;
+    margin-bottom: 20px;
+    display: none;
+
+    @include breakpoint('small') {
+      display: block;
+    }
+
+    p {
+      font: 18px $muller;
+      font-weight: 500;
+      line-height: 35px;
+    }
+  }
 }

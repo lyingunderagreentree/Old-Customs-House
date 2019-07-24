@@ -1,5 +1,37 @@
 .main-page {
 
+  @include breakpoint('small') {
+    // display: flex;
+    // justify-content: center;
+    // align-items: flex-end;
+    text-align: center;
+    background-color: transparent;
+  }
+
+  .container {
+
+    @include breakpoint('small') {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      height: 100vh;
+    }
+    
+  }
+
+  .logo-mobile {
+    display: none;
+
+    @include breakpoint('small') {
+      display: block;
+      margin-top: 10vw;
+    }
+
+    i svg {
+      width: 80%;
+    }
+  }
+
   &__name {
     width: 50%;
     padding-top: 15%;
@@ -9,13 +41,37 @@
       padding-top: 25%;
     }
 
+    @include breakpoint('small') {
+      width: 100%;
+      padding-top: 0;
+    }
+
     span {
       display: block;
+    }
+  }
+  
+  &__p {
+    font: 20px $muller;
+    font-weight: 200;
+    margin: 40px 0;
+    display: none;
+
+    @include breakpoint('small') {
+      display: block;
+      margin-bottom: 10vw;
+      margin-top: -5vw;
     }
   }
 
   .background--main {
     background-image: url(./img/Main_PAGE.jpg);
     background-size: cover;
+
+    @include breakpoint('small') {
+      background-position-x: 60%;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
   }
 }

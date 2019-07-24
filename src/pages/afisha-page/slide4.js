@@ -8,7 +8,16 @@ const sliderSettings = {
   dots: true,
   speed: 500,
   slidesToShow: 1,
-  arrows: true
+  arrows: true,
+  responsive: [
+    {
+      breakpoint: 677,
+      settings: {
+        dots: false,
+        swipe: false,
+      }
+    } 
+  ]
 }
 
 export default () => (

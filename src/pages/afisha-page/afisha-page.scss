@@ -1,9 +1,36 @@
+.afisha-page .page__slider {
+  height: 100vh;
+
+  @include breakpoint('small') {
+    height: 100%;
+  }
+  
+
+  .slick-dots {
+    @include breakpoint('small') {
+      width: 100%;
+      position: fixed;
+      top: auto;
+      
+      bottom: 0;
+      display: flex!important;
+      align-items: center;
+      justify-content: center;
+      height: 60px;
+      background-color: white;
+    }
+  }
+}
+
 .afisha-page {
   background-color: white; 
   color: $almost-black;
 
-  &.page__slider {
-    height: 100vh;
+  h2 {
+    @include breakpoint('small') {
+      position: absolute;
+      top: 55px;
+    }
   }
 
   h2::after {
@@ -17,5 +44,15 @@
 
   svg path {
     stroke: $almost-black;
+  }
+
+  .content-holder {
+    @include breakpoint('small') {
+      flex-direction: column-reverse;
+
+      &__item {
+        position: static;
+      }
+    }
   }
 }
