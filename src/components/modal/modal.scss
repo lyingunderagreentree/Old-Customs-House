@@ -30,10 +30,7 @@
   max-width: 960px;
   margin: 0 auto;
   position: relative;
-
-  @include breakpoint('large') {
-    max-width: 760px;
-  }
+  
   @include breakpoint('medium') {
     max-width: 760px;
   }

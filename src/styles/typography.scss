@@ -38,6 +38,7 @@ h2 {
 
   @include breakpoint('hd') {
     font-size: 65px;
+    padding-bottom: 1vw;
   }
   @include breakpoint('large') {
     font-size: 50px;
@@ -54,9 +55,16 @@ h2 {
   &::after {
     content: '';
     display: inline-block;
-    vertical-align: bottom;
-    box-shadow: -98vw 100vw 0 99.1vw;
+    // vertical-align: bottom;
+    box-shadow: -98vw 100vw 0 98.7vw;
     color: $dark-gray;
+
+    @include breakpoint('large') {
+      box-shadow: -98vw 100vw 0 98.6vw;
+    }
+    @include breakpoint('medium') {
+      box-shadow: -98vw 100vw 0 98.5vw;
+    }
   }
 }
 
