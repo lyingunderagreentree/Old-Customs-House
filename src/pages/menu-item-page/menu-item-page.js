@@ -5,6 +5,7 @@ import eventEmitter from '../../utils/eventEmitter'
 import { Link } from 'react-router-dom'
 import InlineSVG from 'svg-inline-react'
 import arrowBack from '../../components/button/img/back_arrow.svg'
+import Fade from 'react-reveal/Fade'
 
 class MenuPageItem extends React.Component {
   componentDidMount() {
@@ -22,9 +23,9 @@ class MenuPageItem extends React.Component {
             <div className="content-holder__item">
     
               <div className="menu-section-name"><h2>Горячие закуски</h2></div>
-      
+              <Fade bottom cascade>
               <ul className="menu-section">
-      
+              
                 <li className="menu-section__item">
                   <p className="position">Foie Gras запеченная в карамели из хереса с мармеладом 
                     глинтвейн из красного апельсина и сорбетом из черной смородины</p>
@@ -66,8 +67,9 @@ class MenuPageItem extends React.Component {
                     <span className="dotted"></span>
                     <p className="price">2200 руб.</p>
                 </li>
+                
               </ul>
-      
+              </Fade>
               <button className="bttn bttn--back">
                 <InlineSVG src={arrowBack} />
                 <Link to='/menu/'>Вернуться в меню</Link>

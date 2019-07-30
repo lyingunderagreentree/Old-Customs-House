@@ -6,23 +6,82 @@ import InputCounter from '../input/input-counter'
 import InputText from '../input/input-text'
 import InputNumber from '../input/input-number'
 import Button from '../button/button'
+import { Formik } from 'formik'
+
+const initialValues = {
+  date: '',
+  time: '',
+  persons: null,
+  name: '',
+  phone: ''
+}
+
+const onSubmit = (values) => {
+  console.log('check', values)
+}
+
+const validationSchema = {}
 
 export default () => (
-  <form className="booking-form">
+  <Formik
+    initialValues={initialValues}
+    onSubmit={onSubmit}
+    validationSchema={validationSchema}
+    render={({
+      handleSubmit,
+      handleChange,
+      values,
+      setFieldValue,
+      errors,
+    }) => (
+      <form onSubmit={handleSubmit} className="booking-form">
+        <div className="booking-form__firstline">
+          <InputDay 
+            id="input-day" 
+            placeholder={'dd/mm/yyyy'}
+            name='date'
+            onChange={value => {
+              setFieldValue('date', value)
+            }}
+          />
+          <InputTime 
+            id="input-time" 
+            placeholder={'00:00'}
+            name='time'
+            onChange={value => {
+              setFieldValue('time', value)
+            }}
+          />
+          <InputCounter 
+            id="input-counter" 
+            name='persons'
+            onChange={value => {
+              setFieldValue('persons', value)
+            }}
+          />
+        </div>
+        <div className="booking-form__secondline">
+          <InputText 
+            onChange={handleChange} 
+            id="input-name"
+            value={values.name}
+            name='name' 
+            placeholder={'Дмитрий Алексеевич'} 
+          />
+          <InputNumber 
+            name='phone'
+            value={values.phone}
+            onChange={handleChange} 
+            id="input-number" 
+            placeholder={'+7 955 555 555 5'}
+          />
+        </div>
 
-    <div className="booking-form__firstline">
-      <InputDay id="input-day" placeholder={'dd/mm/yyyy'}/>
-      <InputTime id="input-time" placeholder={'00:00'}/>
-      <InputCounter id="input-counter" />
-    </div>
-    <div className="booking-form__secondline">
-      <InputText id="input-name" placeholder={'Дмитрий Алексеевич'} />
-      <InputNumber id="input-number" placeholder={'+7 955 555 555 5'}/>
-    </div>
-    <Button />
-
-  </form>
-    
+        <button type={'submit'} className="bttn bttn--send">Отправить</button>
+        
+      </form>
+    )}
+  />
 )
 
 

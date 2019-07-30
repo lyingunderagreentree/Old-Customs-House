@@ -3,6 +3,7 @@ import Slider from 'react-slick'
 import slide1 from './img/test.jpg'
 import '../afisha-slider.scss'
 import Date from '../../components/date/date'
+import Fade from 'react-reveal/Fade'
 
 const sliderSettings = {
   dots: true,
@@ -30,7 +31,7 @@ export default () => (
           </div>
 
           <Date />
-
+          <Fade bottom cascade>
           <div className="text-block">
             <p>Каждый вечер с понедельника по субботу в ресторане «Старая Таможня» звучит прекрасный легкий джаз – 
               лучшие музыканты Петербурга играют и поют для гостей. У нас играет и несравненная Ольга Абдуллина – 
@@ -42,6 +43,7 @@ export default () => (
               Она выступала на Экономическом форуме, Алых парусах, Паралимпийских играх. 
               Сейчас Ольга Абдуллина готовится к участию в проекте «Голос».</p>
           </div>
+          </Fade>
         </div>
 
         <div className="content-holder__item">

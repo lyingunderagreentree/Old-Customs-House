@@ -11,7 +11,7 @@ class InputCounter extends React.Component {
         <CounterInput
           min={0}
           max={15}
-          onCountChange={count => console.log(count)}
+          onCountChange={this.props.onChange}
           wrapperStyle={{
             width: '100%', 
             justifyContent: 'space-around',     

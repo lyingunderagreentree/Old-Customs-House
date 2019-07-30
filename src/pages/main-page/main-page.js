@@ -7,6 +7,7 @@ import Modal from '../../components/modal/modal'
 import InlineSVG from 'svg-inline-react'
 import logo from '../../components/header/img/logo.svg'
 import { Link } from 'react-router-dom'
+import Div100vh from 'react-div-100vh'
 
 class MainPage extends React.Component {
 
@@ -24,7 +25,9 @@ class MainPage extends React.Component {
 
   render() {
     return (
-      <div className="main-page page columns">      
+       
+      <Div100vh className="main-page page columns">   
+
         <div className="background background--main"></div>
         
         <div className="container column is-10 is-10-mobile">
@@ -41,10 +44,10 @@ class MainPage extends React.Component {
           <Modal modalProps={this.modalProps} modalContent={this.modalContent} />
           
         </div>
-
+      
         {/* <BackgroundVideo /> */}
 
-      </div>
+      </Div100vh>
     )
   }
 }

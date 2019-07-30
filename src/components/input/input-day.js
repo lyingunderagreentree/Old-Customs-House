@@ -17,6 +17,7 @@ class InputDay extends React.Component {
     this.setState({
       startDate: date
     });
+    this.props.onChange(date)
   }
 
   render() {

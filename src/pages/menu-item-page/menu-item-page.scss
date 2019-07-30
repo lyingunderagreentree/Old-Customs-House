@@ -52,18 +52,15 @@
       flex: 0.5;
       text-align: right;
       white-space: nowrap;
-
-      // &::before {
-      //   content: '...........................................................';
-      // }
     }
   }
 }
 
 .menu-pic {
   position: absolute;
-  top: 10%;
+  top: 0%;
   right: -25px;
+  animation: fade-in-fwd 1.2s ease-out 0.2s 1 both;
 
   @include breakpoint('large') {
     top: 0;
@@ -77,4 +74,5 @@
   @include breakpoint('small') {
     display: none;
   }
+
 }

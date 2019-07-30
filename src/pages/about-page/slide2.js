@@ -1,5 +1,6 @@
 import React from 'react'
 import aboutPagePic2 from './img/About_2.jpg'
+import Fade from 'react-reveal/Fade'
 
 export default () => (
   <div className="slide1 slide columns">
@@ -7,7 +8,7 @@ export default () => (
       <div className="content-holder">
         <div className="content-holder__item">
           <div><h2>Душа ресторана — Мистер Гир</h2></div>
-
+          <Fade bottom cascade>
           <div className="text-block">
             <p>Мистер Энтони Уильям Гир создает неповторимую атмосферу заведения. 
               Многолетний опыт работы в лучших ресторанах Великобритании и Франции 
@@ -17,7 +18,7 @@ export default () => (
               и хранитель уникальной коллекции вин и сотернов. 
               Он подберет идеальное винное сопровождение к каждому блюду.</p>
           </div>
-          
+          </Fade>
         </div>
       </div>
 

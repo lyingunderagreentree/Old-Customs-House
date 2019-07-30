@@ -4,6 +4,7 @@ import mapPic from './img/map.png'
 import BookingForm from '../../components/booking-form/booking-form'
 import ContactInfo from '../../components/contact-info/contact-info'
 import eventEmitter from '../../utils/eventEmitter'
+import Fade from 'react-reveal/Fade'
 
 class ContactPage extends React.Component {
   componentDidMount() {
@@ -17,11 +18,11 @@ class ContactPage extends React.Component {
           <div className="content-holder">
             <div className="content-holder__item">
               <h2 className="on-mobile">Контакты</h2>
-
+              <Fade bottom cascad>
               <ContactInfo />
 
               <BookingForm />
-              
+              </Fade>
             </div>
 
             <div className="content-holder__item">

@@ -2,6 +2,7 @@ import React, { Component } from "react"
 import ReactDOM from 'react-dom'
 import '../styles/app.scss'
 import '../styles/buttons.scss'
+import '../styles/animations.scss'
 import { isMoment } from "moment";
 import Layout from './layout/layout'
 import { HashRouter as Router, Route } from 'react-router-dom'

@@ -3,6 +3,7 @@ import './menu-page.scss'
 import mainMenuPic from './img/main-menu.png'
 import eventEmitter from '../../utils/eventEmitter'
 import { Link } from 'react-router-dom'
+import Fade from 'react-reveal/Fade'
 
 class MenuPage extends React.Component {
   componentDidMount() {
@@ -21,9 +22,21 @@ class MenuPage extends React.Component {
             <div className="content-holder__item">
 
               <div><h2>Меню</h2></div>
+              <Fade bottom cascade>
               <ul className="menu-list">
-                <li className="menu-list__item"><Link to='/menu-item-page' className="highlighted">Горячие закуски</Link></li>
-                <li className="menu-list__item"><Link to='/menu-item-page' className="highlighted">Холодные закуски</Link></li>
+              
+                <li className="menu-list__item">
+                  <Link to='/menu-item-page' className="highlighted">Горячие закуски</Link>
+                  <div className="menu-pic is-hidden-mobile">
+                    <img src={mainMenuPic}/>
+                  </div>
+                </li>
+                <li className="menu-list__item">
+                  <Link to='/menu-item-page' className="highlighted">Холодные закуски</Link>
+                  <div className="menu-pic is-hidden-mobile">
+                    <img src={mainMenuPic}/>
+                  </div>
+                </li>
                 <li className="menu-list__item"><Link to='/menu-item-page' className="highlighted">Супы</Link></li>
                 <li className="menu-list__item"><Link to='/menu-item-page' className="highlighted">Дикие морепродукты</Link></li>
                 <li className="menu-list__item"><Link to='/menu-item-page' className="highlighted">Горячие рыбные блюда</Link></li>
@@ -35,15 +48,17 @@ class MenuPage extends React.Component {
                 <li className="menu-list__item"><Link to='/menu-item-page' className="highlighted">Банкетное меню</Link></li>
                 <li className="menu-list__item"><Link to='/menu-item-page' className="highlighted">Винная карта</Link></li>
                 <li className="menu-list__item"><Link to='/menu-item-page' className="highlighted">Напитки</Link></li>
+                
               </ul>
-
+              </Fade>
             </div>
           </div>
-
-          <div className="menu-pic is-hidden-mobile">
+          
+         
+          {/* <div className="menu-pic is-hidden-mobile">
             <img src={mainMenuPic}/>
-          </div>
-
+          </div> */}
+          
         </div>
       </div>
     )

@@ -5,6 +5,7 @@ import Footer from '../footer/footer'
 import eventEmitter from '../../utils/eventEmitter'
 import BookingModal from '../modal/custom-modals/booking'
 import Modal from '../modal/modal'
+import Fade from 'react-reveal/Fade'
 
 class Layout extends React.Component {
 
@@ -33,7 +34,9 @@ class Layout extends React.Component {
   render() {
     return (
       <div className={`layout ${this.state.currentTheme}`}> 
+       
         <div className="min-height">
+
           <Header />
           {this.props.children}
           <Footer />
@@ -41,9 +44,11 @@ class Layout extends React.Component {
           <div className="bttn--side is-hidden-mobile">
             <Modal modalProps={this.modalProps} modalContent={this.modalContent} />
           </div>  
-
+        
         </div>
+        
       </div>
+      
     )
   }
 }

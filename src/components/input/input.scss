@@ -64,7 +64,7 @@
     }
     @include breakpoint('small') {
       margin-bottom: 15px;
-      font-size: 14px;
+      font-size: 16px;
       padding: 16px 20px;
       height: 40px;
     }
@@ -75,4 +75,14 @@
       outline: none;
     }
   } 
+
+  @include breakpoint('small') {
+    select, textarea, input[type="text"], input[type="password"],
+    input[type="datetime"], input[type="datetime-local"],
+    input[type="date"], input[type="month"], input[type="time"],
+    input[type="week"], input[type="number"], input[type="email"],
+    input[type="url"] { 
+      font-size: 16px; 
+    }
+  }
 }

@@ -1,9 +1,6 @@
 .main-page {
 
   @include breakpoint('small') {
-    // display: flex;
-    // justify-content: center;
-    // align-items: flex-end;
     text-align: center;
     background-color: transparent;
   }
@@ -14,7 +11,7 @@
       display: flex;
       flex-direction: column;
       justify-content: space-around;
-      height: 100vh;
+      height: 100%;
     }
     
   }

@@ -1,5 +1,6 @@
 import React from 'react'
 import aboutPagePic1 from './img/About_1.jpg'
+import Fade from 'react-reveal/Fade'
 
 export default () => (
 
@@ -9,7 +10,7 @@ export default () => (
         <div className="content-holder__item">
 
           <div><h2>О ресторане</h2></div>
-
+          <Fade bottom cascade>
           <div className="text-block">
             <p>В эпоху стремительных перемен «Старая Таможня» остается той константой 
               и уголком спокойствия и постоянства, которых нам так не хватает. 
@@ -22,6 +23,7 @@ export default () => (
               придется по душе некая загадочность, мистицизм и в то же время неповторимый уют 
               ресторана «Старая таможня». </p>
           </div>
+          </Fade>
         </div>
       </div>
 

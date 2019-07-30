@@ -7,6 +7,7 @@ h1 {
   letter-spacing: 0.1rem;
   font-family: $playfair;
   font-size: 80px;
+  animation: fade-in-left 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0.5s both;
 
   @include breakpoint('hd') {
     font-size: 80px;
@@ -35,6 +36,8 @@ h2 {
   overflow: hidden;
   padding-bottom: 1.1vw; 
   font-size: 65px;
+  // animation: tracking-in-expand 0.8s ease-in-out 0.2s both;
+  animation: fade-in-left 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) 0.2s both;
 
   @include breakpoint('hd') {
     font-size: 65px;
@@ -64,6 +67,9 @@ h2 {
     }
     @include breakpoint('medium') {
       box-shadow: -98vw 100vw 0 98.5vw;
+    }
+    @include breakpoint('small') {
+      box-shadow: -98vw 100vw 0 96vw;
     }
   }
 }

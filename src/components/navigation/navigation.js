@@ -6,9 +6,9 @@ import InlineSVG from 'svg-inline-react'
 import burgerIcon from './img/Burger_menu.svg'
 
 class Navigation extends React.Component {
-  // showSettings (event) {
-  //   event.preventDefault()
-  // }
+  showSettings (event) {
+    event.preventDefault()
+  }
 
   constructor (props) {
     super(props)
