@@ -1,5 +1,6 @@
 .menu-item-page {
   padding-top: 10%;
+  padding-bottom: 50px;
   
   @include breakpoint('small') {
     background-color: $almost-black;
@@ -8,7 +9,7 @@
   }
 
   .content-holder__item {
-    width: 55%;
+    width: 50%;
     
     @include breakpoint('small') {
       margin-top: 5%;
@@ -40,39 +41,55 @@
     }
 
     .position {
-      flex: 2;
+      width: 60%;
 
       @include breakpoint('small') {
-        flex: 1;
+        flex: 0.8;
         font-size: 14px;
       }
     }
 
+    .dotted {
+      background-image: url('./img/dot.png');
+      width: 25%;
+      background-repeat: repeat-x;
+      background-size: 2%;
+      opacity: 0.7;
+      margin-top: 1.8%;
+      display: none;
+    }
+
     .price {
-      flex: 0.5;
+      // flex: 0.5;
       text-align: right;
       white-space: nowrap;
     }
   }
+
+  .menu-pic {
+    width: 35%;
+    top: 5%;
+    
+    img {
+      // position: absolute;
+      // top: 0%;
+      // right: -25px;
+      // // animation: fade-in-fwd 1.2s ease-out 0.2s 1 both;
+  
+      // @include breakpoint('large') {
+      //   top: 0;
+      //   right: 25px;
+      //   width: 40%;
+      // }
+      // @include breakpoint('medium') {
+      //   top: 0;
+      //   right: 25px;
+      // }
+      // @include breakpoint('small') {
+      //   display: none;
+      // }
+    }
+  }
 }
 
-.menu-pic {
-  position: absolute;
-  top: 0%;
-  right: -25px;
-  animation: fade-in-fwd 1.2s ease-out 0.2s 1 both;
 
-  @include breakpoint('large') {
-    top: 0;
-    right: 25px;
-    width: 40%;
-  }
-  @include breakpoint('medium') {
-    top: 0;
-    right: 25px;
-  }
-  @include breakpoint('small') {
-    display: none;
-  }
-
-}

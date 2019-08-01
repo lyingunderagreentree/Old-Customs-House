@@ -1,7 +1,9 @@
 .social-buttons {
   display: inline-flex;
 
-
+  @include breakpoint('small') {
+    display: none;
+  }
 
   &__item {
     margin-right: 46px;

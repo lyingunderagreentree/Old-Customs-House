@@ -4,6 +4,7 @@ import { slide as Menu } from 'react-burger-menu'
 import './navigation.scss'
 import InlineSVG from 'svg-inline-react'
 import burgerIcon from './img/Burger_menu.svg'
+import SocialButtons from '../social-buttons/social-buttons'
 
 class Navigation extends React.Component {
   showSettings (event) {
@@ -46,8 +47,10 @@ class Navigation extends React.Component {
           <Link to='/afisha' className="menu-item" onClick={() => this.closeMenu()}>афиша</Link>
           <Link to='/menu' className="menu-item" onClick={() => this.closeMenu()}>меню</Link>
           <Link to='/contact' className="menu-item" onClick={() => this.closeMenu()}>контакты</Link>
-          {/* <Link onClick={ this.showSettings } className="menu-item--small">Settings</Link> */}
+
+          <SocialButtons />
         </Menu>
+
       </React.Fragment>
     )
   }

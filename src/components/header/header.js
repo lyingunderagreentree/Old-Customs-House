@@ -17,7 +17,7 @@ export default () => (
 				<div className="header__logo column is-3 is-9-mobile">
 					<Link to='/'><InlineSVG src={logo} /></Link>
 				</div>
-				<div className="column is-12-mobile is-6">
+				<div className="column is-12-mobile is-5">
 					<Navigation />		
 				</div>
 			</div>

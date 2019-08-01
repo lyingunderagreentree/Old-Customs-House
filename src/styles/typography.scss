@@ -66,7 +66,7 @@ h2 {
       box-shadow: -98vw 100vw 0 98.6vw;
     }
     @include breakpoint('medium') {
-      box-shadow: -98vw 100vw 0 98.5vw;
+      box-shadow: -98vw 100vw 0 97.7vw;
     }
     @include breakpoint('small') {
       box-shadow: -98vw 100vw 0 96vw;
@@ -124,9 +124,14 @@ a {
   
   @include breakpoint('small') {
     font-size: 8px;
+
+    &:hover {
+      color: $primary-color;
+    }
   }
 
   &.highlighted {
+
     &:before {
       content: '';
       display: block;
@@ -140,16 +145,11 @@ a {
       width: 0%;
       transition: width 0.2s ease-in;
 
-      // @include breakpoint('large') {
-      //   padding: 8px 0;
-      // }
-    
-      // @include breakpoint('medium') {
-      //   padding: 10px 0;
-      // }
-      
+      @include breakpoint('large') {
+        left: -5px;
+      }
       @include breakpoint('small') {
-        
+        width: 0;
       }
     }
   

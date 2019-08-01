@@ -1,8 +1,15 @@
  .contact-page {
   padding-top: 10%;
+  padding-bottom: 50px;
 
   @include breakpoint('small') {
     padding-top: 0;
+  }
+
+  .content-holder__item {
+    &:last-child {
+      margin-right: 0;
+    }
   }
 
   h2 {

@@ -39,7 +39,7 @@
     right: 8vw;
     top: calc(50% - 75px);
     text-align: right;
-
+    
     @include breakpoint('small') {
       right: 0;
       left: 0;

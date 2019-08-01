@@ -25,9 +25,10 @@ class InputDay extends React.Component {
       <div className="input-day input" >
     
         <label>Дата</label>
-        <DatePicker
+        <DatePicker 
           selected={this.state.startDate}
           onChange={this.handleChange}
+          // readOnly
         />
       
       </div>

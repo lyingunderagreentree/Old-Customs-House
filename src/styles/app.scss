@@ -57,6 +57,10 @@ body {
   }
 }
 
+.container {
+  max-width: 1500px;
+}
+
 .container .content-holder {
   display: flex;
   justify-content: space-between;
@@ -96,7 +100,6 @@ body {
 .page {
   position: relative;
   width: 100vw;
-  // height: 100vh;
   height: 100%;
 
   @include breakpoint('small') {
@@ -119,10 +122,12 @@ body {
   top: 0;
   width: 100vw;
   min-height: 100vh;
+  height: 100%;
   object-fit: cover;
 
   &--menu {
     background-image: url(../pages/menu-page/img/menu-back.jpg);
+    height: 100%;
   }
 
   &--img {
@@ -148,6 +153,53 @@ body {
 
   @include breakpoint('medium') {
     margin-top: 15px;
+  }
+}
+
+.menu-pic {
+  position: absolute;
+  top: 0%;
+  right: 4%;
+  animation: slide-in-right 1.2s ease-in-out 0.6s both;
+  width: 40%;
+
+  @include breakpoint('large') {
+    top: 0;
+    right: 25px;
+    
+  }
+  @include breakpoint('medium') {
+    top: 0;
+    right: 25px;
+  }
+  @include breakpoint('small') {
+    display: none;
+  }
+
+  img {
+    width: 100%;
+    position: absolute;
+  }
+
+  &__front {
+    animation: rotate-center 1s ease-in-out 1.3s 1 both;
+    z-index: 20;
+    max-width: 100%;
+  }
+
+  &__back {
+    animation: scale-in-center 1.5s ease-out 1.3s both;
+    z-index: 15;
+    min-width: 140%;
+    margin-top: -10%;
+    right: -20%;
+
+    @include breakpoint('large') {
+      right: -10%;
+    }
+    @include breakpoint('medium') {
+      right: -10%;
+    }
   }
 }
 

@@ -1,6 +1,7 @@
 import React from 'react'
 import './menu-page.scss'
 import mainMenuPic from './img/main-menu.png'
+import mainMenuPicDetails from './img/ingridients.png'
 import eventEmitter from '../../utils/eventEmitter'
 import { Link } from 'react-router-dom'
 import Fade from 'react-reveal/Fade'
@@ -27,15 +28,9 @@ class MenuPage extends React.Component {
               
                 <li className="menu-list__item">
                   <Link to='/menu-item-page' className="highlighted">Горячие закуски</Link>
-                  <div className="menu-pic is-hidden-mobile">
-                    <img src={mainMenuPic}/>
-                  </div>
                 </li>
                 <li className="menu-list__item">
                   <Link to='/menu-item-page' className="highlighted">Холодные закуски</Link>
-                  <div className="menu-pic is-hidden-mobile">
-                    <img src={mainMenuPic}/>
-                  </div>
                 </li>
                 <li className="menu-list__item"><Link to='/menu-item-page' className="highlighted">Супы</Link></li>
                 <li className="menu-list__item"><Link to='/menu-item-page' className="highlighted">Дикие морепродукты</Link></li>
@@ -55,9 +50,10 @@ class MenuPage extends React.Component {
           </div>
           
          
-          {/* <div className="menu-pic is-hidden-mobile">
-            <img src={mainMenuPic}/>
-          </div> */}
+          <div className="menu-pic is-hidden-mobile">
+            <img src={mainMenuPic} className="menu-pic__front"/>
+            <img src={mainMenuPicDetails} className="menu-pic__back"/>
+          </div>
           
         </div>
       </div>
