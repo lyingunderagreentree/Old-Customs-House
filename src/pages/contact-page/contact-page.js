@@ -1,6 +1,5 @@
 import React from 'react'
 import './contact-page.scss'
-import mapPic from './img/map.png'
 import BookingForm from '../../components/booking-form/booking-form'
 import ContactInfo from '../../components/contact-info/contact-info'
 import eventEmitter from '../../utils/eventEmitter'

@@ -2,9 +2,10 @@ var path = require('path');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var webpack = require('webpack');
 var autoprefixer = require('autoprefixer');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 module.exports = {
-	mode: 'development',
+	mode: 'production',
 	entry: './src/index.js',
 	devtool: 'inline-source-map',
 	devServer: {
@@ -82,7 +83,6 @@ module.exports = {
     	}
 		]
 	},
-
 	plugins: [
 		new HtmlWebpackPlugin({
       template: "./src/index.html"
