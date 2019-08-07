@@ -9,10 +9,10 @@ export default class ScrollEventsArea extends React.Component {
 
   componentDidMount() {
     Hamster(this.scrollArea.current).wheel(e => {
-      if (e.deltaY > 0) {
+      if (e.originalEvent.deltaY > 0) {
         this.props.onScrollUp(e)
       }
-      if (e.deltaY < 0) {
+      else {
         this.props.onScrollDown(e)
       }
     })

@@ -1,15 +1,18 @@
 .menu-page {
-  padding-top: 10%;
-  padding-bottom: 50px;
 
   @include breakpoint('small') {
-    padding-top: 15%;
     background-color: $almost-black;
     height: 100%;
   }
 
+  .content-holder__item {
+    @include breakpoint('small') {
+      margin-top: 54px;
+    }
+  }
+
   .menu-list {
-    margin-top: 20px;
+    margin: 20px 0;
   }
 
   .menu-list__item {
@@ -46,8 +49,8 @@
         line-height: 25px;
       }
       @include breakpoint('small') {
-        font-size: 14px;
-        line-height: 25px;
+        font-size: 12px;
+        line-height: 23px;
       }
 
       &:hover {

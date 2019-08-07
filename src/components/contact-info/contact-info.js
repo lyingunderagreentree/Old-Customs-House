@@ -22,7 +22,7 @@ export default () => (
       <li><InlineSVG src={place} />Санкт-Петербург, Таможенный переулок, 1</li>
       <li><InlineSVG src={clock} />Ежедневно 13:00 - 23:00</li>
       <li><InlineSVG src={phone} />+7 (821) 327 89 80</li>
-      <li><InlineSVG src={mail} />custom@cocncord-catering</li>
+      <li><InlineSVG src={mail} />custom@concord-catering.ru</li>
     </ul>
 
     <div className="contact-info__mobile">

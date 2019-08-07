@@ -2,6 +2,21 @@
   color: white;
   background-color: $almost-black;
   height: 100%;
+
+  .layout {
+    .header, .footer {
+      position: absolute;
+    }
+
+    .footer {
+      bottom: 0;
+
+      @include breakpoint('small') {
+        // top: -30px;
+        bottom: auto;
+      }
+    }
+  }
   
   .text-block p {
     font-weight: 300;

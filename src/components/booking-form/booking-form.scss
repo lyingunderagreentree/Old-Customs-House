@@ -34,13 +34,17 @@
     flex-basis: 110px;
     margin-right: 40px;
 
+    @include breakpoint('medium') {
+      flex-grow: 0;
+      margin-right: 10px;
+    }
     @include breakpoint('small') {
       margin-right: 0;
     }
 
     &.input-day {
       flex-grow: 3;
-
+    
       @include breakpoint('small') {
         margin-right: 20px;
       }

@@ -1,6 +1,7 @@
 var path = require('path');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var webpack = require('webpack');
+var autoprefixer = require('autoprefixer');
 
 module.exports = {
 	mode: 'development',
@@ -33,23 +34,31 @@ module.exports = {
 						name: "fonts/[name].[ext]",
 					},
 				},
+			},	
+			{
+				test: /\.css$/,
+				use: [{ loader: 'style-loader' }, { loader: 'css-loader' }, { loader: 'postcss-loader' }]
 			},
 			{
-				test: /\.scss$/,
+				test: /\.(scss|sass)$/,
 				exclude: /node_modules/,
-				use: ["style-loader", "css-loader", "sass-loader",
+				use: [
+					"style-loader", 
+					"css-loader", 
+					"postcss-loader", 
+					"sass-loader",
 					{
 						loader: 'sass-resources-loader',
 						options: {
-							resources: ['./src/styles/mixins.scss', './src/styles/variables.scss']
+							resources: [
+								'./src/styles/mixins.scss', 
+								'./src/styles/variables.scss', 
+								'./src/styles/bulma-custom-variables.sass'
+							]
 						}
-					}	
+					},
 				]
 			},
-			{
-				test: /\.css$/,
-				use: [{ loader: 'style-loader' }, { loader: 'css-loader' }]
-      },
 			{
 				test: /\.(png|jpe?g|gif)$/i,
 				exclude: /node_modules/,

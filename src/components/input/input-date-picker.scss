@@ -12,6 +12,12 @@
 
   .react-datepicker__input-container {
     display: block;
+
+    input {
+      @include breakpoint('small') {
+        font-size: 14px;
+      }
+    }
   }
 }
 

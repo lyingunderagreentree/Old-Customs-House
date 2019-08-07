@@ -20,7 +20,7 @@ class App extends Component {
 		return (
 			<React.Fragment>
 				<Router>
-					<Layout />
+					{/* <Layout /> */}
 
 					<AnimatedSwitch
 						atEnter={{ opacity: 0 }}

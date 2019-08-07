@@ -1,21 +1,20 @@
  .contact-page {
-  padding-top: 10%;
-  padding-bottom: 50px;
-
-  @include breakpoint('small') {
-    padding-top: 0;
-  }
-
+   
   .content-holder__item {
     &:last-child {
       margin-right: 0;
+    }
+
+    @include breakpoint('medium') {
+      margin-right: 0;
+      width: 48%
     }
   }
 
   h2 {
     @include breakpoint('small') {
       position: absolute;
-      top: 55px;
+      top: 54px;
     }
 
     &::after {
@@ -50,7 +49,7 @@
       width: 100vw;
       margin-bottom: 10px;
       margin-left: -10%;
-      margin-top: 125px;
+      margin-top: 130px;
     }
 
     iframe {

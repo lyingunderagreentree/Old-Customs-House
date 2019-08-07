@@ -53,7 +53,7 @@
 	@include breakpoint('small') {
 		width: 70vw;
     height: 15vw;
-		margin: 0 auto;
+		margin: 10% auto;
 		font-size: 14px;
 		// margin-bottom: 30px;
 	}
@@ -134,18 +134,21 @@
 	height: 35px;
 	display: flex;
 	align-items: center;
+	color: $primary-color;
+
+	&:focus {
+		outline: none;
+	}
 
 	@include breakpoint('large') {
 		font-size: 8px;
 		letter-spacing: 2px;
 		padding: 0;
-		// margin: 0;
 	}
 	@include breakpoint('medium') {
 		font-size: 8px;
 		letter-spacing: 2px;
 		padding: 0;
-		// margin: 0;
 	}
 
 	a {

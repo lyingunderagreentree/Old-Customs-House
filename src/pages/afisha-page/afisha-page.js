@@ -10,6 +10,7 @@ import Slider from 'react-slick'
 import eventEmitter from '../../utils/eventEmitter'
 import ScrollEventsArea from '../../components/scroll-events-area/scroll-events-area'
 import AnimatedScroll from '../../components/animated-scroll-icon/animated-scroll-icon'
+import Layout from '../../components/layout/layout'
 
 class AfishaPage extends React.Component {
   isSliderEnabled = true
@@ -30,7 +31,8 @@ class AfishaPage extends React.Component {
         breakpoint: 677,
         settings: {
           vertical: false,
-          scroll: false
+          scroll: false,
+          apadtiveHeight: true
         }
       } 
     ]
@@ -48,39 +50,41 @@ class AfishaPage extends React.Component {
   render() {
     return (
       <div className="afisha-page page">
-        <ScrollEventsArea
-          onScrollUp={e => {
-            e.preventDefault()
-            if (this.isSliderEnabled) {
-              this.slider.current.slickNext()
-              this.isSliderEnabled = false
-              setTimeout(() => {
-                this.isSliderEnabled = true
-              }, 1000);
-            }
-          }}
-          onScrollDown={e => {
-            e.preventDefault()
-            if (this.isSliderEnabled) {
-              this.slider.current.slickPrev()
-              this.isSliderEnabled = false
-              setTimeout(() => {
-                this.isSliderEnabled = true
-              }, 1000);
-            }
-          }}
-        >
-          <Slider className="page__slider dots-black" {...this.sliderSettings} ref={this.slider}>
-            <Slide1 />
-            <Slide2 />
-            <Slide3 />
-            <Slide4 />
-            <Slide5 />
-          </Slider>
-        </ScrollEventsArea>
+        <Layout>
+          <ScrollEventsArea
+            onScrollUp={e => {
+              e.preventDefault()
+              if (this.isSliderEnabled) {
+                this.slider.current.slickNext()
+                this.isSliderEnabled = false
+                setTimeout(() => {
+                  this.isSliderEnabled = true
+                }, 1000);
+              }
+            }}
+            onScrollDown={e => {
+              e.preventDefault()
+              if (this.isSliderEnabled) {
+                this.slider.current.slickPrev()
+                this.isSliderEnabled = false
+                setTimeout(() => {
+                  this.isSliderEnabled = true
+                }, 1000);
+              }
+            }}
+          >
+            <Slider className="page__slider dots-black" {...this.sliderSettings} ref={this.slider}>
+              <Slide1 />
+              <Slide2 />
+              <Slide3 />
+              <Slide4 />
+              <Slide5 />
+            </Slider>
+          </ScrollEventsArea>
 
-        <AnimatedScroll />
-
+          <AnimatedScroll />
+          
+        </Layout>
       </div>
     )
   }

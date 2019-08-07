@@ -12,7 +12,7 @@
       font-size: 26px;
       margin-bottom: 10px;
     }
-    @include breakpoint('large') {
+    @include breakpoint('medium') {
       font-size: 22px;
     }
   }

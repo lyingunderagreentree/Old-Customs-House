@@ -1,6 +1,4 @@
 .menu-item-page {
-  padding-top: 10%;
-  padding-bottom: 50px;
   
   @include breakpoint('small') {
     background-color: $almost-black;
@@ -12,7 +10,7 @@
     width: 50%;
     
     @include breakpoint('small') {
-      margin-top: 5%;
+      margin-top: 54px;
       margin-right: 0;
       width: 100%;
     }
@@ -67,27 +65,10 @@
   }
 
   .menu-pic {
-    width: 35%;
-    top: 5%;
-    
-    img {
-      // position: absolute;
-      // top: 0%;
-      // right: -25px;
-      // // animation: fade-in-fwd 1.2s ease-out 0.2s 1 both;
-  
-      // @include breakpoint('large') {
-      //   top: 0;
-      //   right: 25px;
-      //   width: 40%;
-      // }
-      // @include breakpoint('medium') {
-      //   top: 0;
-      //   right: 25px;
-      // }
-      // @include breakpoint('small') {
-      //   display: none;
-      // }
+    @include breakpoint('medium') {
+      top: 10%;
+      right: -50%;
+      width: 80%;
     }
   }
 }

@@ -13,13 +13,14 @@
     @include breakpoint('hd') {
       width: 20px;
     }
-
     @include breakpoint('large') {
       width: 12px;
     }
-
     @include breakpoint('medium') {
       width: 10px;
+    }
+    @include breakpoint('small') {
+      width: 30px;
     }
 
     .social-buttons__icon {
@@ -29,6 +30,12 @@
 
         g {
           display: contents;
+        }
+      }
+
+      &:hover {
+        svg g path {
+          fill: $primary-color;
         }
       }
     }

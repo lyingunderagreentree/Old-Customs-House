@@ -5,9 +5,13 @@
 	width: 100%;
 	// animation: fade-in-fwd 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.6s both;
 
+	@include breakpoint('small') {
+		margin: 0!important;
+		padding: 0;
+	}
+
 	&__logo {
 		padding: 0;
-		// margin: 0 0.75rem;
 
 		@include breakpoint('small') {
 			position: absolute;
@@ -21,6 +25,14 @@
 
 		a i svg {
 			width: 100%;
+		}
+	}
+
+	.language-switch {
+		display: none;
+
+		@include breakpoint('small') {
+			display: block;
 		}
 	}
 }

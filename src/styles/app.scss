@@ -1,7 +1,10 @@
 @import '../../node_modules/normalize.css/normalize.css';
-@import '../../node_modules/bulma/css/bulma.min.css';
+@import './bulma-custom-variables.sass';
+// @import '../../node_modules/bulma/css/bulma.min.css';
+@import '~bulma/bulma';
 @import '../../node_modules/slick-carousel/slick/slick.css';
 @import './typography.scss';
+
 
 * {
   margin: 0;
@@ -40,7 +43,7 @@ body {
 
   @include breakpoint('small') {
     justify-content: flex-start;
-    min-height: 100%;
+    // min-height: 100%;
   }
 }
 
@@ -64,10 +67,11 @@ body {
 .container .content-holder {
   display: flex;
   justify-content: space-between;
+  margin-top: 5%;
 
   @include breakpoint('small') {
     flex-direction: column-reverse;
-    margin-bottom: 20px;
+    margin-top: 0;
   } 
 
   &__item {
@@ -103,7 +107,7 @@ body {
   height: 100%;
 
   @include breakpoint('small') {
-    // min-height: 100vh;
+    padding-bottom: 30px;
   }
 }
 
@@ -123,7 +127,7 @@ body {
   width: 100vw;
   min-height: 100vh;
   height: 100%;
-  object-fit: cover;
+  background-size: cover;
 
   &--menu {
     background-image: url(../pages/menu-page/img/menu-back.jpg);
@@ -158,19 +162,18 @@ body {
 
 .menu-pic {
   position: absolute;
-  top: 0%;
+  top: 10%;
   right: 4%;
   animation: slide-in-right 1.2s ease-in-out 0.6s both;
   width: 40%;
 
   @include breakpoint('large') {
-    top: 0;
-    right: 25px;
-    
+    top: 15%;
   }
   @include breakpoint('medium') {
-    top: 0;
-    right: 25px;
+    top: 10%;
+    right: -40%;
+    width: 80%;
   }
   @include breakpoint('small') {
     display: none;
