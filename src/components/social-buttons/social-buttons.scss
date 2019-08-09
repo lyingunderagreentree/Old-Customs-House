@@ -20,16 +20,28 @@
       width: 10px;
     }
     @include breakpoint('small') {
-      width: 30px;
+      width: 18px;
+      height: 18px;
+      margin-right: 60px; 
     }
 
     .social-buttons__icon {
+      @include breakpoint('small') {
+        font-size: 0;
+      }
       svg {
         vertical-align: super;
         width: 100%;
 
         g {
           display: contents;
+        }
+
+        rect {
+          @include breakpoint('small') {
+            width: 18px;
+            height: 18px;
+          }
         }
       }
 

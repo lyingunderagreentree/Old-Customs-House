@@ -2,7 +2,7 @@ import React from 'react'
 import aboutPagePic4 from './img/About_4.jpg'
 
 export default () => (
-  <div className="slide1 slide columns">
+  <div className="slide1 slide--big columns">
     <div className="container column is-10 is-10-mobile">
       <div className="content-holder">
         <div className="content-holder__item">

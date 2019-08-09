@@ -1,13 +1,14 @@
  .contact-page {
    
   .content-holder__item {
-    &:last-child {
-      margin-right: 0;
-    }
 
     @include breakpoint('medium') {
       margin-right: 0;
-      width: 48%
+      width: 48%;
+    }
+
+    &:last-child {
+      margin-right: 0;
     }
   }
 

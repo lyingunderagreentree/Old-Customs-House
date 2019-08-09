@@ -29,23 +29,20 @@ class MenuPage extends React.Component {
                 <ul className="menu-list">
                 
                   <li className="menu-list__item">
-                    <Link to='/menu-item-page' className="highlighted">Горячие закуски</Link>
+                    <Link to='/menu-item-page' className="highlighted">Специальные блюда</Link>
                   </li>
                   <li className="menu-list__item">
-                    <Link to='/menu-item-page' className="highlighted">Холодные закуски</Link>
+                    <Link to='/menu-item-page' className="highlighted">Летнее меню</Link>
                   </li>
+                  <li className="menu-list__item"><Link to='/menu-item-page' className="highlighted">Меню аквариума</Link></li>
+                  <li className="menu-list__item"><Link to='/menu-item-page' className="highlighted">Холодные закуски</Link></li>
+                  <li className="menu-list__item"><Link to='/menu-item-page' className="highlighted">Горячие закуски</Link></li>
                   <li className="menu-list__item"><Link to='/menu-item-page' className="highlighted">Супы</Link></li>
-                  <li className="menu-list__item"><Link to='/menu-item-page' className="highlighted">Дикие морепродукты</Link></li>
                   <li className="menu-list__item"><Link to='/menu-item-page' className="highlighted">Горячие рыбные блюда</Link></li>
                   <li className="menu-list__item"><Link to='/menu-item-page' className="highlighted">Горячие мясные блюда</Link></li>
                   <li className="menu-list__item"><Link to='/menu-item-page' className="highlighted">Гарниры</Link></li>
                   <li className="menu-list__item"><Link to='/menu-item-page' className="highlighted">Десерты</Link></li>
-                  <li className="menu-list__item"><Link to='/menu-item-page' className="highlighted">Молекулярная кухня</Link></li>
-                  <li className="menu-list__item"><Link to='/menu-item-page' className="highlighted">Вегетарианское меню</Link></li>
-                  <li className="menu-list__item"><Link to='/menu-item-page' className="highlighted">Банкетное меню</Link></li>
-                  <li className="menu-list__item"><Link to='/menu-item-page' className="highlighted">Винная карта</Link></li>
-                  <li className="menu-list__item"><Link to='/menu-item-page' className="highlighted">Напитки</Link></li>
-                  
+                  <li className="menu-list__item"><Link to='/menu-item-page' className="highlighted">Вегетарианское меню</Link></li>                  
                 </ul>
                 </Fade>
               </div>

@@ -4,7 +4,7 @@ import Fade from 'react-reveal/Fade'
 
 export default () => (
 
-  <div className="slide1 slide columns">
+  <div className="slide1 slide--big columns">
     <div className="container column is-10 is-10-mobile">
       <div className="content-holder">
         <div className="content-holder__item">

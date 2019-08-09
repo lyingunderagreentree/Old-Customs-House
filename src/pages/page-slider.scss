@@ -8,10 +8,10 @@
   }
 
   &.slick-slider .slick-list {
-    height: 100vh!important;
+    height: 100vh;
 
     @include breakpoint('small') {
-      height: 100%!important;
+      height: 100%;
     }
   }
 
@@ -19,7 +19,7 @@
     transform: none;
   }
 
-  .slick-list .slide {
+  .slick-list .slide--big {
     height: 100vh;
     padding-top: 5%;
     position: relative;

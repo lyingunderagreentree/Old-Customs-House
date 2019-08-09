@@ -31,7 +31,7 @@ class AboutPage extends React.Component {
         breakpoint: 677,
         settings: {
           vertical: false,
-          apadtiveHeight: true
+          adaptiveHeight: true
         }
       } 
     ]

@@ -15,7 +15,7 @@ import Layout from '../../components/layout/layout'
 class AfishaPage extends React.Component {
   isSliderEnabled = true
 
-  sliderSettings = {
+  afishaSliderSettings = {
     dots: true,
     speed: 800,
     slidesToShow: 1,
@@ -31,8 +31,7 @@ class AfishaPage extends React.Component {
         breakpoint: 677,
         settings: {
           vertical: false,
-          scroll: false,
-          apadtiveHeight: true
+          adaptiveHeight: true
         }
       } 
     ]
@@ -73,13 +72,14 @@ class AfishaPage extends React.Component {
               }
             }}
           >
-            <Slider className="page__slider dots-black" {...this.sliderSettings} ref={this.slider}>
+            <Slider className="page__slider dots-black" {...this.afishaSliderSettings} ref={this.slider}>
               <Slide1 />
               <Slide2 />
               <Slide3 />
               <Slide4 />
               <Slide5 />
             </Slider>
+            
           </ScrollEventsArea>
 
           <AnimatedScroll />

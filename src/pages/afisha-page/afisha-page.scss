@@ -72,4 +72,10 @@
       }
     }
   }
+
+  .page__slider .slick-list {
+    @include breakpoint('small') {
+      height: auto!important;
+    }
+  }
 }

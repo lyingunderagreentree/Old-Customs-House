@@ -5,7 +5,7 @@ var autoprefixer = require('autoprefixer');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 module.exports = {
-	mode: 'production',
+	mode: 'development',
 	entry: './src/index.js',
 	devtool: 'inline-source-map',
 	devServer: {
@@ -61,7 +61,7 @@ module.exports = {
 				]
 			},
 			{
-				test: /\.(png|jpe?g|gif)$/i,
+				test: /\.(png|jpe?g|JPG|gif)$/i,
 				exclude: /node_modules/,
         use: [
           {

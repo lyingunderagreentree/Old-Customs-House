@@ -28,6 +28,12 @@
 		}
 	}
 
+	&__nav {
+		@include breakpoint('medium') {
+			margin-top: 16px;
+		}
+	}
+
 	.language-switch {
 		display: none;
 

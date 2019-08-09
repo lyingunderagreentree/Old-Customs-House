@@ -9,6 +9,7 @@ import logo from '../../components/header/img/logo.svg'
 import { Link } from 'react-router-dom'
 import Div100vh from 'react-div-100vh'
 import Layout from '../../components/layout/layout'
+import FinishOrderMessage from '../../components/modal/custom-modals/finish-order'
 
 class MainPage extends React.Component {
 
@@ -18,6 +19,7 @@ class MainPage extends React.Component {
 
   modalContent = (
     <BookingModal />
+    // <FinishOrderMessage />
   )
 
   componentDidMount() {
