@@ -17,7 +17,7 @@ export default () => (
 					<Link to='/'><InlineSVG src={logo} /></Link>
 				</div>
 				<LanguageSwitch />
-				<div className="header__nav column is-5 is-6-tablet is-12-mobile">
+				<div className="header__nav column is-5 is-6-tablet">
 					<Navigation />		
 				</div>
 			</div>

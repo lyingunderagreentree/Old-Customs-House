@@ -6,6 +6,7 @@ import '../afisha-slider.scss'
 import '../../styles/date.scss'
 import clock from './img/clock.svg'
 import InlineSVG from 'svg-inline-react'
+import Fade from 'react-reveal/Fade'
 import { Slide } from 'react-slideshow-image'
 
 const PicSliderSettings = {
@@ -41,24 +42,26 @@ export default () => (
       <div className="content-holder">
 
         <div className="content-holder__item">
-          <div>  <h2>Молекулярная кухня</h2> </div>
+          <div className="is-hidden-mobile"><h2>Молекулярная кухня</h2></div>
           
           <div className="date">
             <InlineSVG src={clock} />
             <p className="date__time">ПН - СБ, 20:00 - 22:30</p>
           </div>
-      
-          <div className="text-block">
-            <p>Представляем вам Le Petit Chef – кулинарный видео-перфоманс, 
-            взорвавший европейское профессиональное сообщество.  
-            Обычный ужин превращается в увлекательный шоу-ужин благодаря технологиям 3D-мэппинга. 
-            Le Petit Chef – это комбинация цифрового искусства, звука, комедии и технического прогресса, 
-            разворачивается прямо на поверхности стола.</p>
-
-          </div>
+          <Fade bottom cascade>
+            <div className="text-block">
+              <p>Представляем вам Le Petit Chef – кулинарный видео-перфоманс, 
+              взорвавший европейское профессиональное сообщество.  
+              Обычный ужин превращается в увлекательный шоу-ужин благодаря технологиям 3D-мэппинга. 
+              Le Petit Chef – это комбинация цифрового искусства, звука, комедии и технического прогресса, 
+              разворачивается прямо на поверхности стола.</p>
+            </div>
+          </Fade>
         </div>
 
         <div className="content-holder__item">
+
+          <div className="on-mobile"><h2>Молекулярная кухня</h2></div>
 
           <Slider className="afisha-slider" {...PicSliderSettings}>
             <img src={slide1}/>

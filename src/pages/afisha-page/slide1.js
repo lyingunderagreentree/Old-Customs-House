@@ -55,7 +55,8 @@ export default class extends React.Component {
         <div className="container column is-10 is-10-mobile">
           <div className="content-holder">
             <div className="content-holder__item">
-              <div>  
+
+              <div className="is-hidden-mobile">  
                 <h2>Jazz вечера</h2>
               </div>
     
@@ -80,6 +81,8 @@ export default class extends React.Component {
             </div>
     
             <div className="content-holder__item">
+
+              <div className="on-mobile"><h2>Jazz вечера</h2></div>
     
               <Slider className="afisha-slider" {...PicSliderSettings}>
                 <img src={slide1}/>

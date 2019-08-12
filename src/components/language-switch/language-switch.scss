@@ -2,9 +2,10 @@
   margin-right: -12px;
 
   @include breakpoint('small') {
-    position: absolute;
-    left: -8px;
-    top: 24px;
+    // position: absolute;
+    // left: -8px;
+    // top: 24px;
+    margin-left: -6px;
   }
   
   &__item {

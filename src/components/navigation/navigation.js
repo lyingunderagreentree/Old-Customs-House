@@ -20,6 +20,11 @@ class Navigation extends React.Component {
 
   handleStateChange (state) {
     this.setState({menuOpen: state.isOpen})  
+    window.setTimeout(() => { 
+      if (state.isOpen) {
+        document.activeElement.blur()
+      }
+    })
   }
   closeMenu () {
     this.setState({menuOpen: false})
@@ -27,9 +32,8 @@ class Navigation extends React.Component {
   toggleMenu () {
     this.setState(state => ({menuOpen: !state.menuOpen}))
   }
-
+  
   render() {
-
     return (
       <React.Fragment>
         <ul className="navigation is-hidden-mobile">

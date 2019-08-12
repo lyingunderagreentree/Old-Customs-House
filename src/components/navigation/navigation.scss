@@ -34,14 +34,10 @@
 }
 
 .header .bm-burger-button {
-  position: absolute;
-  top: 30px;
-  right: 0;
   width: 32px;
-  height: 24px;
+  height: 26px;
   margin-right: -6px;
   display: none;
-  z-index: 500!important;
 
   @include breakpoint('small') {
     display: block;
@@ -50,6 +46,7 @@
 
 .bm-menu {
   height: auto!important;
+  overflow: unset;
 
   .bm-item {
     font-size: 24px;
@@ -57,7 +54,7 @@
     color: white;
     position: relative;
 
-    &:hover, &:focus {
+    &:focus {
       color: $primary-color;
       outline: none;
     }

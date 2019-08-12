@@ -42,7 +42,10 @@ export default () => (
     <div className="container column is-10 is-10-mobile"> 
       <div className="content-holder content-holder--reverse">
         <div className="content-holder__item">
-          <div>  <h2>Кулинарное шоу</h2> </div>
+
+          <div className="is-hidden-mobile">  
+            <h2>Кулинарное шоу</h2> 
+          </div>
 
           <div className="date">
             <InlineSVG src={clock} />
@@ -62,6 +65,8 @@ export default () => (
         </div>
 
         <div className="content-holder__item">
+
+          <div className="on-mobile"><h2>Кулинарное шоу</h2></div>
 
           <Slider className="afisha-slider" {...PicSliderSettings}>
             <img src={slide1}/>

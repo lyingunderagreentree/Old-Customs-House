@@ -115,7 +115,7 @@ body {
   justify-content: space-between;
 
   @include breakpoint('small') {
-    justify-content: flex-end;
+    width: 100%;
   }
 }
 

@@ -1,14 +1,14 @@
 .afisha-page {
   background-color: white; 
   color: $almost-black;
-
-  @include breakpoint('small') {
-    padding-bottom: 50px;
-  }
   
   .layout {
     .header, .footer {
       position: absolute;
+
+      @include breakpoint('small') {
+        position: static;
+      }
     }
 
     .footer {
@@ -37,16 +37,9 @@
         display: flex!important;
         align-items: center;
         justify-content: center;
-        height: 60px;
+        height: 40px;
         background-color: white;
       }
-    }
-  }
-
-  h2 {
-    @include breakpoint('small') {
-      position: absolute;
-      top: 55px;
     }
   }
 
@@ -73,7 +66,7 @@
     }
   }
 
-  .page__slider .slick-list {
+  .page__slider>.slick-list {
     @include breakpoint('small') {
       height: auto!important;
     }

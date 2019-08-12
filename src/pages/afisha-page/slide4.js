@@ -6,6 +6,7 @@ import '../afisha-slider.scss'
 import '../../styles/date.scss'
 import clock from './img/clock.svg'
 import InlineSVG from 'svg-inline-react'
+import Fade from 'react-reveal/Fade'
 import { Slide } from 'react-slideshow-image'
 
 const PicSliderSettings = {
@@ -41,26 +42,28 @@ export default () => (
     <div className="container column is-10 is-10-mobile">
       <div className="content-holder content-holder--reverse">
         <div className="content-holder__item">
-          <div> <h2>Винные вечера</h2> </div>
+          <div className="is-hidden-mobile"> <h2>Винные вечера</h2> </div>
           
           <div className="date">
             <InlineSVG src={clock} />
             <p className="date__time">ПН - СБ, 20:00 - 22:30</p>
           </div>
-      
-          <div className="text-block">
-            <p>Узнать, как создаются кулинарные шедевры – большая удача. 
-              Гости «Старой Таможни» могут своими глазами увидеть, 
-              как из отдельных продуктов рождается превосходная симфония вкуса. </p>
+          <Fade bottom cascade>
+            <div className="text-block">
+              <p>Узнать, как создаются кулинарные шедевры – большая удача. 
+                Гости «Старой Таможни» могут своими глазами увидеть, 
+                как из отдельных продуктов рождается превосходная симфония вкуса. </p>
 
-            <p>На островке в центре зала шеф-повар не только приготовит для вас изысканный ужин: 
-              перед вами развернется настоящий кулинарный спектакль. 
-              В зале могут с комфортом расположиться от 5 до 15 человек.</p>
-
-          </div>
+              <p>На островке в центре зала шеф-повар не только приготовит для вас изысканный ужин: 
+                перед вами развернется настоящий кулинарный спектакль. 
+                В зале могут с комфортом расположиться от 5 до 15 человек.</p>
+            </div>
+          </Fade>
         </div>
 
         <div className="content-holder__item">
+
+          <div className="on-mobile"> <h2>Винные вечера</h2> </div>
 
           <Slider className="afisha-slider" {...PicSliderSettings}>
             <img src={slide1}/>
