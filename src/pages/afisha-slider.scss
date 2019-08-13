@@ -1,4 +1,4 @@
-.page__slider .slide--big .afisha-slider {
+.afisha-page .afisha-slider {
   width: 588px;
   height: 588px;
 
@@ -107,8 +107,14 @@
     @include breakpoint('medium') {
       height: 300px;
     }
-    @include breakpoint('small') {
-      height: 300px;
+    // @include breakpoint('small') {
+    //   height: 300px;
+    // }
+
+    .slick-track .slick-slide>div  {
+      @include breakpoint('small') {
+        height: 300px;
+      }
     }
 
     .slick-track img {
@@ -122,8 +128,9 @@
         height: 300px;
       }
       @include breakpoint('small') {
-        height: 300px;
+        // height: 300px;
         border-radius: 10px;
+        height: 100%;
       }
     }
   }

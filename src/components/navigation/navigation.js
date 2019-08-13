@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import { slide as Menu } from 'react-burger-menu'
 import './navigation.scss'
 import InlineSVG from 'svg-inline-react'
@@ -46,11 +46,11 @@ class Navigation extends React.Component {
         <Menu className="mobile" width={'100%'} isOpen={this.state.menuOpen}
           onStateChange={(state) => this.handleStateChange(state)} right 
           customBurgerIcon={ <InlineSVG src={ burgerIcon} /> }>
-          <Link to='/' className="menu-item" onClick={() => this.closeMenu()}>главная</Link>
-          <Link to='/about' className="menu-item" onClick={() => this.closeMenu()}>о ресторане</Link>
-          <Link to='/afisha' className="menu-item" onClick={() => this.closeMenu()}>афиша</Link>
-          <Link to='/menu' className="menu-item" onClick={() => this.closeMenu()}>меню</Link>
-          <Link to='/contact' className="menu-item" onClick={() => this.closeMenu()}>контакты</Link>
+          <NavLink to='/' exact className="menu-item" onClick={() => this.closeMenu()}>главная</NavLink>
+          <NavLink to='/about' className="menu-item" onClick={() => this.closeMenu()}>о ресторане</NavLink>
+          <NavLink to='/afisha' className="menu-item" onClick={() => this.closeMenu()}>афиша</NavLink>
+          <NavLink to='/menu' className="menu-item" onClick={() => this.closeMenu()}>меню</NavLink>
+          <NavLink to='/contact' className="menu-item" onClick={() => this.closeMenu()}>контакты</NavLink>
 
           <SocialButtons />
         </Menu>

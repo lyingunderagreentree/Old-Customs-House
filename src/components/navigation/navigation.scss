@@ -61,7 +61,7 @@
     color: white;
     position: relative;
 
-    &:focus {
+    &.active {
       color: $primary-color;
       outline: none;
     }

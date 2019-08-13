@@ -1,7 +1,6 @@
 import React from 'react'
 import Slider from 'react-slick'
 import slide1 from './img/test.jpg'
-import slide2 from './img/test1.jpg'
 import '../afisha-slider.scss'
 import '../../styles/date.scss'
 import clock from './img/clock.svg'

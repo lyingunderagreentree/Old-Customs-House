@@ -1,7 +1,6 @@
 import React from 'react'
 import Slider from 'react-slick'
 import slide1 from './img/test.jpg'
-import slide2 from './img/test1.jpg'
 import '../afisha-slider.scss'
 import '../../styles/date.scss'
 import clock from './img/clock.svg'
@@ -25,7 +24,6 @@ const PicSliderSettings = {
   ]
 }
 
-
 // const picSliderSettings = {
 //   duration: 5000,
 //   transitionDuration: 500,
@@ -33,18 +31,17 @@ const PicSliderSettings = {
 //   indicators: false,
 //   arrows: true,
 //   onChange: (oldIndex, newIndex) => {
-    
 //   }
 // }
 
 export default class extends React.Component {
   constructor(props) {
     super(props)
+    this.slide = React.createRef()
   }
 
   componentDidMount() {
     // ref.css({
-
     // })
   }
 
@@ -109,5 +106,4 @@ export default class extends React.Component {
       </div>
     )
   }
-
 }
