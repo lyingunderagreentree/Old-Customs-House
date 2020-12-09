@@ -1,16 +1,26 @@
-var path = require('path');
-var HtmlWebpackPlugin = require('html-webpack-plugin');
-var webpack = require('webpack');
-var autoprefixer = require('autoprefixer');
+const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const webpack = require('webpack');
+const autoprefixer = require('autoprefixer');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const ImageminPlugin = require('imagemin-webpack-plugin').default;
 
 module.exports = {
 	mode: 'development',
 	entry: './src/index.js',
 	devtool: 'inline-source-map',
+	optimization: {
+		minimize: true,
+		minimizer: [
+			new UglifyJsPlugin({
+				test: /\.js(\?.*)?$/i,
+				exclude: /node_modules/
+			}),
+		],
+	},
 	devServer: {
 		contentBase: './dist',
-		port: 5000,
+		port: 9000,
 		hot: true
 	},
 	output: {
@@ -81,12 +91,16 @@ module.exports = {
 					removeTags: false
 				}
     	}
-		]
+		],
 	},
 	plugins: [
 		new HtmlWebpackPlugin({
       template: "./src/index.html"
-    }),
+		}),
+		new ImageminPlugin({
+			test: /\.(jpe?g|png|gif|svg)$/i,
+			optimizationLevel: 9
+		}),
 		new webpack.HotModuleReplacementPlugin()
 	]
 };
