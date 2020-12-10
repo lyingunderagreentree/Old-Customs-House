@@ -97,10 +97,10 @@ module.exports = {
 		new HtmlWebpackPlugin({
       template: "./src/index.html"
 		}),
-		new ImageminPlugin({
-			test: /\.(jpe?g|png|gif|svg)$/i,
-			optimizationLevel: 9
-		}),
+		// new ImageminPlugin({
+		// 	test: /\.(jpe?g|png|gif|svg)$/i,
+		// 	optimizationLevel: 9
+		// }),
 		new webpack.HotModuleReplacementPlugin()
 	]
 };

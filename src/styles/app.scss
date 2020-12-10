@@ -90,7 +90,7 @@ body {
 
     .content-holder__item {
       &:first-child {
-        margin-right: 10%;
+        // margin-right: 10%;
 
         @include breakpoint('medium') {
           margin-right: 6%;

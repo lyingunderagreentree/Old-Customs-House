@@ -5,9 +5,10 @@ import Footer from '../footer/footer'
 import eventEmitter from '../../utils/eventEmitter'
 import BookingModal from '../modal/custom-modals/booking'
 import Modal from '../modal/modal'
-import Fade from 'react-reveal/Fade'
+// import Fade from 'react-reveal/Fade'
 
 class Layout extends React.Component {
+  _isMounted = false
 
   constructor(props) {
     super(props)
@@ -17,11 +18,17 @@ class Layout extends React.Component {
   }
 
   componentDidMount() {
+    this._isMounted = true
+
     eventEmitter.on('SET_LAYOUT_THEME', theme => {
       this.setState({
         currentTheme: theme
       })
     })
+  }
+
+  componentWillUnmount() {
+    this._isMounted = false;
   }
 
   modalProps = {
