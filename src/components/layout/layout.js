@@ -21,9 +21,11 @@ class Layout extends React.Component {
     this._isMounted = true
 
     eventEmitter.on('SET_LAYOUT_THEME', theme => {
-      this.setState({
-        currentTheme: theme
-      })
+      if (this._isMounted) {
+        this.setState({
+          currentTheme: theme
+        })
+      }
     })
   }
 

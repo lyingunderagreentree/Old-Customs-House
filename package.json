@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "homepage": "https://lyingunderagreentree.github.io/old-customs-house",
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
     "watch": "webpack --watch",
@@ -43,6 +46,7 @@
     "bulma": "^0.7.5",
     "event-emitter": "^0.3.5",
     "formik": "^1.5.8",
+    "gh-pages": "^3.1.0",
     "hammerjs": "^2.0.8",
     "hamsterjs": "^1.1.3",
     "imagemin-webpack-plugin": "^2.4.2",
