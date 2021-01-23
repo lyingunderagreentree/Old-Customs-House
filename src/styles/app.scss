@@ -1,6 +1,5 @@
 @import '../../node_modules/normalize.css/normalize.css';
 @import './bulma-custom-variables.sass';
-// @import '../../node_modules/bulma/css/bulma.min.css';
 @import '~bulma/bulma';
 @import '../../node_modules/slick-carousel/slick/slick.css';
 @import './typography.scss';
@@ -216,7 +215,6 @@ body {
  
 .switch-wrapper > div {
   position: absolute;
- 
 }
 
 .on-mobile {
@@ -226,3 +224,4 @@ body {
     display: block;
   }
 }
+

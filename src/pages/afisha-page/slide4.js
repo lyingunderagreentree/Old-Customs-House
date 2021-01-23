@@ -24,20 +24,8 @@ const PicSliderSettings = {
   ]
 }
 
-
-// const picSliderSettings = {
-//   duration: 5000,
-//   transitionDuration: 500,
-//   infinite: false,
-//   indicators: false,
-//   arrows: true,
-//   onChange: (oldIndex, newIndex) => {
-    
-//   }
-// }
-
 export default () => (
-  <div className="slide1 slide--big columns">
+  <div className="slide--big columns">
     <div className="container column is-10 is-10-mobile">
       <div className="content-holder content-holder--reverse">
         <div className="content-holder__item">
@@ -71,16 +59,6 @@ export default () => (
             <img src={slide1}/>
             <img src={slide1}/>
           </Slider>
-
-          {/* <div className="slide-container afisha-slider">
-            <Slide {...picSliderSettings}>
-              <div className="each-slide"><img src={slide1}/></div>
-              <div className="each-slide"><img src={slide2}/></div>
-              <div className="each-slide"><img src={slide1}/></div>
-              <div className="each-slide"><img src={slide2}/></div>
-              <div className="each-slide"><img src={slide1}/></div>
-            </Slide>
-          </div> */}
 
         </div>
         

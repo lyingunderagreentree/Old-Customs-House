@@ -37,13 +37,13 @@ class AfishaPage extends React.Component {
     ]
   }
 
-  componentDidMount() {
-    eventEmitter.emit('SET_LAYOUT_THEME', 'layout--black')
-  }
-
   constructor(props) {
     super(props)
     this.slider = React.createRef()
+  }
+
+  componentDidMount() {
+    eventEmitter.emit('SET_LAYOUT_THEME', 'layout--black')
   }
 
   render() {

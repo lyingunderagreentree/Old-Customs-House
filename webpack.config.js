@@ -99,7 +99,7 @@ module.exports = {
 		}),
 		new ImageminPlugin({
 			test: /\.(jpe?g|png|gif|svg)$/i,
-			optimizationLevel: 9
+			optimizationLevel: 6
 		}),
 		new webpack.HotModuleReplacementPlugin()
 	]
