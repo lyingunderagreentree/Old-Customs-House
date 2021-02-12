@@ -27,6 +27,7 @@
     font-size: 0;
     z-index: 5;
     border: none;
+    cursor: pointer;
 
     @include breakpoint('large') {
       width: 25px;

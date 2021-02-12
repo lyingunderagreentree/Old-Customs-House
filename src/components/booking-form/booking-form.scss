@@ -34,6 +34,10 @@
     flex-basis: 110px;
     margin-right: 40px;
 
+    &:active, &:focus {
+      box-shadow: none;
+    }
+
     @include breakpoint('medium') {
       flex-grow: 0;
       margin-right: 10px;
